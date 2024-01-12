@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="ko">
+
+   <head>
+      <meta charset="utf-8">
+       <title>본문서식태그3</title>
+       <style>
+
+     div *{ border : 2px solid red; margin:5px; } 
+        h2{height:100px; line-height:100px; font-size:40px; text-indent:20px; margin-bottom}
+       </style>
+
+   </head>
+
+   <body>
+    <!--태그의성질(block, inline)
+             1.블럭(block:집주인- 집을 고칠 권리를 갖춤(넓이, 높이, 이웃과의 간격)
+                h1~6, P, hr, pre,ul,ol,li,dl,dt,dd,adress
+             2.인라인(inline: 블럭에 입주한 세입자- 집을 고칠 권리를 못갖춤(넓이,높이,이웃과의 간격은 좌우만 가능)
+               img, a, button, b, strong, mark, small, br
+-->
+     <div>
+
+      <h2>태그의 성질</h2>
+
+     <p><i>html</i> 태그는 크게<b> 2종류의</b> <mark>성질</mark>로 구분 됩니다.</p>
+     <ul>
+        <li>블럭(block)요소의 태그</li>
+        <li>인라인(inline)요소의 태그</li>
+    </ul>
+          
+       블럭 요소 성질의 태그의 특징은 주변 정보로부터 독립되어
+          자신이 속한<b> 별도</b>의 독립 문단(블럭)을 개행(생성)시켜 줍니다
+     
+        인라인 요소 태그의 특징은 자신이 속한 문단(블럭)내에
+          다른 인라인 요소의 태그들과 같은 문단을 사용합니다.(개행이 이루어 지지 않습니다.)
+    
+
+</div>
+
+     
+
+    <hr>
+
+       <ul>
+           <li>
+             <a href="#">쇼박스 안내</a>
+           <ul>
+             <li><a href="#">쇼박스 소개</a></li>
+             <li><a href="#">사업영역</a></li>
+             <li><a href="#">회사연혁</a></li>            
+           </ul>
+      </li> 
+
+         <li>
+             <a href="#">쇼박스 작품</a>
+            <ul>
+              <li><a href="#">쇼박스 라인업</a></li>
+           </ul>
+       </li> 
+
+         <li>
+             <a href="#">IR</a>
+            <ul>
+              <li><a href="#">공시정보</a></li>
+              <li><a href="#">재무정보</a></li>
+              <li><a href="#">IR뉴스</a></li>
+              <li><a href="#">관리규정</a></li>
+            </ul>
+        </li> 
+
+        <li>
+           <a href="#">채용정보</a>
+             <ul>
+             <li><a href="#">채용정보</a></li>
+             <li><a href="#">오시는길</a></li>
+            </ul>
+        </li> 
+      </ul>
+    
+ </body>
+
+</html>
+
