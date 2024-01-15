@@ -1,0 +1,14 @@
+:root{
+  - margin: : crimon;
+}
+
+#box1 {
+  width: 200px;
+  height: 200px;
+  background: red;
+}
+#box2 {
+  width: 250vw;
+  height: 30vh;
+  background: red;
+}
