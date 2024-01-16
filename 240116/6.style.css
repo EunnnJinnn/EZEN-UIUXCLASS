@@ -1,0 +1,22 @@
+li {
+  /* list-style: none; */
+  display: flex;
+  gap
+}
+
+body {
+  width: 960px;
+  margin: 0 auto;
+  /* border: 1px solid rebeccapurple; */
+}
+#aside {
+  width: 200px;
+  float: left;
+}
+#cotent {
+  width: 760px;
+  float: left;
+}
+section {
+  overflow: hidden;
+}

@@ -1,0 +1,21 @@
+div {
+  background: -webkit-gradient(
+    width: 500px;
+    height: 100px;
+    text-align: center;
+    margin: 0 auto;
+  );
+  background: linear-gradient(
+    to bottom,
+    #f85032 1%,
+    #f16f5c 50%,
+    #f6290c 1% #e73827 100%
+  );
+  background: linear-gradient(
+    to right,
+    #e0f3fa 0%,
+    #d8f0fc 57%,
+    #d8f0fc 57%,
+    #b6dffd 100%
+  ); W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+
+}
