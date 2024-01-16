@@ -1,0 +1,17 @@
+body {
+  background-image: url(./img/roblox_1.jpg);
+  color: #fff;
+  font-size: small;
+}
+fieldset {
+  background: #232527;
+  border: none;
+  border-radius: 5px;
+  display: inline;
+  font-style: color;
+}
+#회원가입 {
+  background-color: #919293;
+  border: none;
+  border-radius: 5px;
+}
