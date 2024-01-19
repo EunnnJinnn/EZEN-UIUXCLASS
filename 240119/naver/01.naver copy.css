@@ -1,0 +1,22 @@
+@import url(./reset.css);
+
+#top_nav {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.search input {
+  position: relative;
+  width: 55%;
+  margin-top: 10px;
+  margin-left: 23%;
+  padding: 20px 15px;
+  padding-left: 80px;
+  font-size: 22px;
+  border-radius: 30px;
+  border-color: #03c75a;
+  background-image: url(./img/1200px-Naver_logo_initial.svg.png);
+  background-size: 20px;
+  background-repeat: no-repeat;
+}
