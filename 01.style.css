@@ -1,0 +1,80 @@
+@import url(./01.reset.css);
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  padding: 30px 25px 30px 25px;
+}
+
+nav .nav_left {
+  display: flex;
+  gap: 25px;
+}
+nav .nav_right {
+  display: flex;
+  gap: 25px;
+}
+#searchbar {
+  background: url(./img/nlogo.png);
+  background-repeat: no-repeat;
+  background-position: 10px center;
+  background-size: 20px;
+  border-radius: 20px;
+  border: 1px solid #03c75a;
+  padding-left: 30px;
+  box-sizing: border-box;
+  position: relative;
+}
+#searchbar input {
+  border: none;
+  display: flex;
+  margin: 10px;
+}
+.searchbar_op {
+  display: flex;
+
+  justify-content: right;
+}
+.searchicon {
+  display: flex;
+  position: absolute;
+}
+.bottomimg {
+  text-align: center;
+  display: flex;
+}
+.bottomimg img {
+  display: flex;
+  width: 60px;
+  text-align: center;
+}
+
+#bodytop img {
+  display: flex;
+  width: 60%;
+}
+.login {
+  display: flex;
+  border: 1px solid #e3e5e8;
+}
+.login input {
+  background: #03c75a;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  width: 20%;
+  height: 50px;
+}
+.login p {
+  display: flex;
+  margin-top: 10px;
+  padding-left: 60%;
+}
+.login label {
+  display: flex;
+  margin-bottom: ;
+  margin: 10px 0 30px;
+  padding-right: 12px;
+}
