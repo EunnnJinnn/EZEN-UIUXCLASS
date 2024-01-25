@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+}
+header {
+  background: palevioletred;
+  height: 150px;
+  text-align: center;
+  line-height: 150px;
+  color: #fff;
+}
+
+section {
+  display: flex;
+}
+article,
+aside,
+nav {
+  height: calc(100vh - 300px);
+}
+article {
+  background: palegoldenrod;
+  flex: 3;
+}
+aside {
+  background: plum;
+  flex: 1;
+}
+nav {
+  background: peru;
+  flex: 1;
+}
+footer {
+  background: paleturquoise;
+  height: 150px;
+  text-align: center;
+  line-height: 150px;
+  color: #fff;
+}
