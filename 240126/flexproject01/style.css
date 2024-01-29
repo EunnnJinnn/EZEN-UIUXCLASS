@@ -68,6 +68,10 @@ a {
 .nav {
   order: 2;
   width: 100%;
+  display: none;
+}
+.nav.active {
+  display: block;
 }
 .gnb li {
   display: flex;

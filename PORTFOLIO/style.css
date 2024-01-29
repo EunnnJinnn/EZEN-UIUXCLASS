@@ -1,0 +1,7 @@
+@import url(./reset.css);
+
+/* header */
+header {
+  width: 1100%;
+  border-bottom: 1px solid #ddd;
+}
