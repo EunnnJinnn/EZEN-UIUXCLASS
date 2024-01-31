@@ -1,0 +1,27 @@
+@import url(./reset.css);
+
+.parent {
+  border: 5px solid #000;
+  background: khaki;
+  height: 300px;
+  gap: 10px;
+  grid-template-columns: auto auto auto;
+}
+.parent div {
+  color: #fff;
+  border: 1px solid royalblue;
+  font-size: 30px;
+  text-align: center;
+}
+.item1 {
+  background-color: crimson;
+  grid-column: 1 / span 2; /* 고정값이 있음을 알려줘야함  */
+}
+.item2 {
+  background-color: aqua;
+  grid-row: 1 / span 2;
+}
+.item5 {
+  background: palevioletred;
+  grid-column: 1 span 3;
+}

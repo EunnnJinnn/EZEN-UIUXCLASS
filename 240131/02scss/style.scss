@@ -1,0 +1,17 @@
+.heading {
+  text-align: center;
+  position: relative;
+  padding-bottom: 20px;
+  span {
+    color: aquamarine;
+  }
+  &::before {
+    content: "";
+    position: absolute; /* 부모요소한테 position: rel~;*/
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 400px;
+    height: 4px;
+  }
+}
