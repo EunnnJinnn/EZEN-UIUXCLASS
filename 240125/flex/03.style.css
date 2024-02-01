@@ -1,0 +1,31 @@
+.parent {
+  border: 5px solid green;
+  height: 500px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.parent div {
+  width: 200px;
+  height: 200px;
+  color: #fff;
+  text-align: center;
+  margin: 5px;
+}
+.child1 {
+  /* flex-shrink: 1; 너비값의 비율 , 1은 100% , 원래 고정값보다 작아지는 순간부터 그 고정값에 비례해서 줄어듦 */
+  background: crimson;
+  flex: 1;
+  order: 1;
+  align-self: flex-end;
+}
+.child2 {
+  background: dodgerblue;
+  flex: 1;
+  order: 2;
+}
+.child3 {
+  background: yellowgreen;
+  flex: 1;
+  order: 3;
+}

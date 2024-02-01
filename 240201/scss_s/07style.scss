@@ -1,0 +1,29 @@
+:is(header, section, footer) h1 {
+  font: {
+    size: 30px;
+    weight: normal;
+  }
+}
+
+:is(header, section, footer) h1::before {
+  content: "";
+  width: 10px;
+  height: 30px;
+  background: blueviolet;
+  display: inline-block;
+  border-radius: 5px;
+  margin-right: 10px;
+  transform: translateY(3px);
+}
+// 원래대로라면 이렇게 해야함
+// .frame {
+//   p {
+//     font-size: 20px;
+//   }
+//   span {
+//     font-size: 20px;
+//   }
+// }
+.frame :is(p, span) {
+  font-size: 20px;
+}

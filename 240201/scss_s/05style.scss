@@ -1,0 +1,11 @@
+.frame {
+  border: 1px solid paleturquoise;
+  padding: 20px;
+  text-align: center;
+
+  // @at-root.heading [ html에 있는 동일한 class를 가지고 있는 모든 요소의 속성을 변경 할 수 있음 ]
+  @at-root.heading {
+    color: aqua;
+    font-size: 35px;
+  }
+}

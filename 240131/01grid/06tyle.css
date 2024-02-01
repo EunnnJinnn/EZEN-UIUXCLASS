@@ -1,0 +1,65 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
+  a {
+
+  }
+
+  var
+/* css를 사용할 때, 변수 설정 가능 */
+/*  변수 = 변할 수 있는 수 vs 상수 =고정되어 있는 수 */
+/* 그룹 및 팀작업 => A = index / B => detaail */
+/* wire frame =>  (*메뉴얼 ) */
+
+
+:root {
+  --primary-color: #8b008b;
+  --secondary-color: #cc5285;
+  --background-color: #222222;
+  --font-size: 1.6em;
+}
+
+/* reset */
+border-style: {
+  color: var(--background-color);
+  line-hight: var(--font-size);
+}
+
+/* body */
+body {
+  color: var(--background-color);
+  line-height: var(--font-size);
+}
+.container {
+  display: grid;
+  justify-items: ;
+  align-items: center;
+  height: 100vh;
+}
+.best-seller {
+  border: 1px solid #000;
+  border-radius: 20px;
+  width: 1230px;
+  padding: 20px 30px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+}
+.best-header {
+  font-size: 22x;
+
+.view-more { 
+  float: right;
+  color: crimson;
+}
+.view-more:hover {
+  .items-inner {
+    grid 
+  }
+}
+.item {
+  border: 1px solid #000;
+  
+}
+
+/* tablet */

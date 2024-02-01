@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+}
+
+nav {
+  display: inline-block;
+  width: 300px;
+  height: 100vh;
+  background: palegreen;
+}
+header {
+  height: 130px;
+  background: purple;
+  color: #fff;
+}
+section {
+  display: flex;
+}
+article,
+aside {
+  height: calc(100vh - 300px);
+}
+article {
+  background: powderblue;
+  flex: 3;
+}
+aside {
+  background: pink;
+  flex: 1;
+}
+footer {
+  background: peru;
+  width: 900px;
+  height: 170px;
+  color: #fff;
+}

@@ -1,0 +1,35 @@
+@import url(./reset.css);
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@200;300;600&display=swap");
+/* header */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #e8f0fa;
+}
+.header-logo {
+  display: flex;
+  margin: 50px;
+}
+.header-nav {
+  display: flex;
+  margin-left: 900px;
+  width: 70%;
+  height: 100%;
+  font-size: 42px;
+  margin-top: 0;
+  padding: 20px;
+  border-bottom: 1px solid #ddd;
+}
+.header-nav ul {
+  width: 100%;
+  display: flex;
+}
+.header-nav ul li {
+  cursor: pointer;
+  text-transform: capitalize;
+  text-align: center;
+  font-size: 1.8rem;
+  letter-spacing: ;
+}
+.header-nav ul li a {
+  color: #a7c1e1;
+}
