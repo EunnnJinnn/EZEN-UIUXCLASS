@@ -1,0 +1,64 @@
+body {
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.heart-beat {
+  position: relative;
+  animation: 0.8s beat infinite;
+}
+
+.heart {
+  position: relative;
+  background-color: firebrick;
+  display: inline-block;
+  height: 60px;
+  top: 0;
+  left: 0;
+  transform: rotate(-45deg);
+  width: 60px;
+  box-shadow: 0 -10px 100px firebrick, 0 -10px 90px firebrick;
+}
+
+.heart:before,
+.heart:after {
+  content: "";
+  background-color: firebrick;
+  border-radius: 50%;
+  height: inherit;
+  width: inherit;
+  position: absolute;
+  width: inherit;
+  box-shadow: 0 -10px 100px firebrick;
+}
+
+.heart:before {
+  top: -30px;
+  left: 0;
+}
+
+.heart:after {
+  left: 30px;
+  top: 0;
+}
+
+@keyframes beat {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.1);
+  }
+  40% {
+    transform: scale(1);
+  }
+  60% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

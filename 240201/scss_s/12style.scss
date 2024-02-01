@@ -1,0 +1,43 @@
+$complete-btn: powderblue;
+$loading-btn: lightblue;
+$error-btn: blue;
+$notice-btn-hover: ;
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  height: 100vh;
+}
+
+// template
+@mixin notice-button {
+  font-size: $notice-btn-fs;
+  width: 150px;
+  padding: 7px;
+  background: #fff;
+  border: none;
+  border-radius: 5px;
+  transition: all 0.3s;
+  &.complete:hover {
+    background: $complete-btn;
+    color: #fff;
+  }
+  &.loading:hover {
+    baackground: $loading-btn;
+    color: #fff;
+  }
+}
+
+// indivisual
+.complete {
+  @include notice-button;
+}
+.loading {
+  @include notice-button;
+}
+.error {
+  @include notice-button;
+}
