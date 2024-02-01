@@ -1,0 +1,33 @@
+.bg1 {
+  background: #000;
+  position: relative;
+}
+.mt-1 {
+  color: #fff;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 500px;
+  left: 300px;
+  font-size: 90px;
+}
+.mt-2 {
+  color: #fff;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 500px;
+  right: 300px;
+  font-size: 90px;
+}
+.m-img {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding: auto;
+  margin-top: 90px;
+  position: absolute;
+  top: 10%;
+  left: 30%;
+}
