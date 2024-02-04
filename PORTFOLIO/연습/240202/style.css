@@ -1,0 +1,141 @@
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #ecf0f1;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+header {
+  background-color: #3498db;
+  color: #fff;
+  padding: 1rem 0;
+  text-align: center;
+}
+header h1 {
+  margin: 0;
+}
+header nav ul {
+  list-style: none;
+  padding: 0;
+}
+header nav ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+header nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+header nav ul li a:hover {
+  color: #2ecc71;
+}
+
+section {
+  padding: 3rem 0;
+}
+section h2 {
+  color: #3498db;
+}
+section p {
+  color: #666;
+}
+
+.hero {
+  background-image: url("your-hero-image.jpg");
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  text-align: center;
+}
+.hero h2 {
+  font-size: 2.5rem;
+}
+.hero p {
+  font-size: 1.2rem;
+}
+
+.about-me {
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.about-me p {
+  font-size: 1.2rem;
+}
+
+.projects {
+  background-color: #ecf0f1;
+}
+.projects .project-card {
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  margin-bottom: 20px;
+}
+.projects .project-card h3 {
+  color: #3498db;
+}
+.projects .project-card p {
+  color: #666;
+}
+.projects .project-card a {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 15px;
+  background-color: #3498db;
+  color: #fff;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+.projects .project-card a:hover {
+  background-color: #2ecc71;
+}
+
+.contact {
+  background-color: #3498db;
+  color: #fff;
+}
+.contact p {
+  font-size: 1.2rem;
+}
+
+footer {
+  background-color: #3498db;
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    width: 90%;
+  }
+  header nav ul {
+    text-align: center;
+  }
+  header nav ul li {
+    display: block;
+    margin: 10px 0;
+  }
+  .hero h2 {
+    font-size: 2rem;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+  .project-card {
+    padding: 1rem;
+  }
+  footer {
+    font-size: 0.8rem;
+  }
+}/*# sourceMappingURL=style.css.map */

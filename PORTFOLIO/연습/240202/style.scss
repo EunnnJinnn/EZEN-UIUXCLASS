@@ -1,0 +1,179 @@
+@font-face {
+  font-family: "PyeongChangPeace-Bold";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/PyeongChangPeace-Bold.woff2")
+    format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+$primary-color: #3498db;
+$secondary-color: #2ecc71;
+$bg-color: #ecf0f1;
+
+* {
+  font-family: "PyeongChangPeace-Bold";
+}
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: $bg-color;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+header {
+  background-color: $primary-color;
+  color: #fff;
+  padding: 1rem 0;
+  text-align: center;
+
+  h1 {
+    margin: 0;
+  }
+
+  nav {
+    ul {
+      list-style: none;
+      padding: 0;
+
+      li {
+        display: inline-block;
+        margin-right: 20px;
+
+        a {
+          text-decoration: none;
+          color: #fff;
+          transition: color 0.3s ease;
+
+          &:hover {
+            color: $secondary-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+section {
+  padding: 3rem 0;
+
+  h2 {
+    color: $primary-color;
+  }
+
+  p {
+    color: #666;
+  }
+}
+
+.hero {
+  background-image: url("your-hero-image.jpg");
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  text-align: center;
+
+  h2 {
+    font-size: 2.5rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+  }
+}
+
+.about-me {
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+  p {
+    font-size: 1.2rem;
+  }
+}
+
+.projects {
+  background-color: $bg-color;
+
+  .project-card {
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    margin-bottom: 20px;
+
+    h3 {
+      color: $primary-color;
+    }
+
+    p {
+      color: #666;
+    }
+
+    a {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 15px;
+      background-color: $primary-color;
+      color: #fff;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: $secondary-color;
+      }
+    }
+  }
+}
+
+.contact {
+  background-color: $primary-color;
+  color: #fff;
+
+  p {
+    font-size: 1.2rem;
+  }
+}
+
+footer {
+  background-color: $primary-color;
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+// Media Queries for Responsive Design
+@media screen and (max-width: 768px) {
+  .container {
+    width: 90%;
+  }
+
+  header nav ul {
+    text-align: center;
+
+    li {
+      display: block;
+      margin: 10px 0;
+    }
+  }
+
+  .hero h2 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .project-card {
+    padding: 1rem;
+  }
+
+  footer {
+    font-size: 0.8rem;
+  }
+}
