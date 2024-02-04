@@ -1,13 +1,319 @@
-$color-primary: #283953;
+// Variables
+$main-color: rgb(40, 57, 83);
+$secondary-color: rgb(176, 188, 206);
+$bg-color: #f4ebdc;
+$border-radius: 8px;
 
-.bg1 {
-  display: flex;
-  background-color: $color-primary;
-  width: 1980px;
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: $bg-color;
+  color: #333;
 }
-.PORTFOLIO-1p {
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+header {
+  background-color: $main-color;
+  color: #fff;
+  padding: 1rem 0;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+  h1 {
+    margin: 0;
+    font-size: 1.8rem;
+  }
+
+  nav {
+    ul {
+      list-style: none;
+      padding: 0;
+
+      li {
+        display: inline-block;
+        margin-right: 20px;
+
+        a {
+          text-decoration: none;
+          color: #fff;
+          font-size: 1rem;
+          transition: color 0.3s ease;
+
+          &:hover {
+            color: $secondary-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+section {
+  padding: 3rem 0;
+
+  h2 {
+    color: $main-color;
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+
+  p {
+    color: #666;
+    font-size: 1.2rem;
+    line-height: 1.6;
+  }
+}
+
+.cover {
+  background-image: url("./img/main1-item.png"); // Add your cover image path
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  text-align: center;
+  height: 100vh;
   display: flex;
-  .m-img {
-    s
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  h2 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+  }
+
+  p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+
+  .cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: $main-color;
+    color: #fff;
+    text-decoration: none;
+    border-radius: $border-radius;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: $secondary-color;
+    }
+  }
+}
+
+.hero {
+  background-color: $bg-color;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  border-radius: $border-radius;
+  padding: 2rem;
+
+  h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+
+  p {
+    font-size: 1.2rem;
+  }
+}
+
+.about-me {
+  background-color: #fff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  border-radius: $border-radius;
+  padding: 2rem;
+
+  p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+  }
+}
+
+.projects {
+  background-color: #fff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  border-radius: $border-radius;
+  padding: 2rem;
+
+  h2 {
+    color: $main-color;
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+
+  .project-card {
+    background-color: $bg-color;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: $border-radius;
+    padding: 1.5rem;
+    margin-bottom: 20px;
+
+    h3 {
+      color: $main-color;
+    }
+
+    p {
+      color: #666;
+      line-height: 1.6;
+    }
+
+    a {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 15px;
+      background-color: $main-color;
+      color: #fff;
+      text-decoration: none;
+      border-radius: $border-radius;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: $secondary-color;
+      }
+    }
+  }
+}
+
+.contact {
+  background-color: $main-color;
+  color: #fff;
+  border-radius: $border-radius;
+  padding: 2rem;
+
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+
+  p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+  }
+}
+
+footer {
+  background-color: $main-color;
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+  width: 100%;
+  box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+
+  p {
+    font-size: 0.8rem;
+  }
+}
+
+// Media Queries for Responsive Design
+
+// Desktop
+@media screen and (min-width: 769px) {
+  .container {
+    width: 80%;
+  }
+
+  header {
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+  }
+
+  header nav ul {
+    text-align: center;
+
+    li {
+      display: inline-block;
+      margin-right: 20px;
+
+      a {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  .hero h2 {
+    font-size: 2.5rem;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+  }
+
+  .project-card {
+    padding: 1.5rem;
+  }
+
+  footer {
+    font-size: 0.8rem;
+  }
+}
+
+// Tablet
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .container {
+    width: 90%;
+  }
+
+  header nav ul {
+    text-align: center;
+
+    li {
+      display: block;
+      margin: 10px 0;
+    }
+  }
+
+  .hero h2 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .project-card {
+    padding: 1.5rem;
+  }
+
+  footer {
+    font-size: 0.8rem;
+  }
+}
+
+// Mobile
+@media screen and (max-width: 480px) {
+  .container {
+    width: 90%;
+  }
+
+  header nav ul {
+    text-align: center;
+
+    li {
+      display: block;
+      margin: 10px 0;
+    }
+  }
+
+  .hero h2 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .project-card {
+    padding: 1rem;
+  }
+
+  footer {
+    font-size: 0.8rem;
   }
 }

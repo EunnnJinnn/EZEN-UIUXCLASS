@@ -1,35 +1,129 @@
-@import url(./reset.css);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-/* header */
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+@font-face {
+  font-family: "PyeongChangPeace-Light";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/PyeongChangPeace-Light.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "PyeongChangPeace-Bold";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/PyeongChangPeace-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  background: #e8f0fa;
+  font-family: "PyeongChangPeace-Light", serif;
+  background: #283953;
+  scroll-behavior: smooth;
 }
-.header-logo {
-  display: flex;
-  margin: 50px;
-}
-.header-nav {
-  display: flex;
-  margin-left: 900px;
-  width: 70%;
-  height: 100%;
-  font-size: 42px;
-  margin-top: 0;
-  padding: 20px;
-  border-bottom: 1px solid #ddd;
-}
-.header-nav ul {
+
+.nav {
+  display: inline;
+  margin-right: 20px;
   width: 100%;
+  padding: 20px 10px;
+}
+.nav ul {
   display: flex;
+  letter-spacing: 5px;
+  right: 90%;
 }
-.header-nav ul li {
-  cursor: pointer;
-  text-transform: capitalize;
+.nav a {
+  color: #f4ebdc;
+  font-size: 1rem;
+  transition: all 0.6s ease;
+}
+.nav a:hover {
+  font-size: 1.5rem;
+  border-bottom: 1px solid #f4ebdc;
+}
+
+.m-img {
+  position: relative;
   text-align: center;
-  font-size: 1.8rem;
-  letter-spacing: ;
+  height: 100vh;
+  display: inline;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-.header-nav ul li a {
-  color: #a7c1e1;
+.m-img .cover-img {
+  width: 50vh;
+  margin-bottom: 20px;
+  position: absolute;
+  top: 50vh;
+  left: 10vh;
 }
+
+.title {
+  position: relative;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.title span {
+  color: #f4ebdc;
+  font-size: 3.5rem;
+  letter-spacing: 3rem;
+  transform: translateY(90%);
+}
+
+.main-item {
+  position: relative;
+  height: 100vh;
+}
+.main-item .mi-1 {
+  position: absolute;
+  width: 3rem;
+  top: -81.5%;
+  left: 49%;
+}
+.main-item .mi-1 .mi-2 {
+  position: absolute;
+}
+.main-item .mi-1 .mi-3 {
+  display: flex;
+  position: absolute;
+  width: 1500px;
+  height: 1500px;
+  animation: top_left 15s linear infinite;
+}
+.main-item .mi-1 .mi-4 {
+  display: flex;
+  position: absolute;
+  width: 3rem;
+  height: 3rem;
+  animation: twinkle 3s infinite;
+}
+.main-item .mi-1 .mi-5 {
+  display: flex;
+  position: absolute;
+  width: 3rem;
+  height: 3rem;
+  animation: twinkle 3s infinite;
+}
+@keyframes twinkle {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}/*# sourceMappingURL=style.css.map */

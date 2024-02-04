@@ -1,23 +1,78 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./01.style.css" />
-    <title>portfolio</title>
+    <link rel="stylesheet" href="./01style.css" />
+    <title>Your Portfolio</title>
   </head>
-  <body>
-    <div id="wrap"></div>
-    <div class="bg1" style="height: 1080px">
-      <div class="container1">
-        <div class="PORTFOLIO-1p">
-          <h1 class="mt-1">PORT</h1>
-          <h1 class="mt-2">FOLIO</h1>
-          <article class="m-img">
-            <img src="./img/main1-item.png" style="width: 500px" />
-          </article>
-        </div>
+  <body class="cover-body">
+    <header class="cover-header">
+      <div class="container">
+        <h1>Your Name</h1>
+        <nav>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
       </div>
-    </div>
+    </header>
+
+    <section id="cover" class="cover">
+      <div class="container">
+        <h2>Your Portfolio</h2>
+        <p>Showcasing my skills and projects.</p>
+        <a href="#home" class="cta-button">Explore More</a>
+      </div>
+    </section>
+
+    <section id="home" class="hero">
+      <div class="container">
+        <h2>Welcome to My Portfolio</h2>
+        <p>Showcasing my skills and projects.</p>
+      </div>
+    </section>
+
+    <section id="about" class="about-me">
+      <div class="container">
+        <h2>About Me</h2>
+        <p>
+          I am a passionate web developer with expertise in HTML, CSS, and
+          JavaScript.
+        </p>
+      </div>
+    </section>
+
+    <section id="projects" class="projects">
+      <div class="container">
+        <h2>Projects</h2>
+        <div class="project-card">
+          <h3>Project Title</h3>
+          <p>Description of the project goes here.</p>
+          <a href="#">View Project</a>
+        </div>
+        <!-- Add more project cards as needed -->
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div class="container">
+        <h2>Contact Me</h2>
+        <p>Feel free to reach out through the form below or via email.</p>
+        <!-- Include a contact form or other contact information. -->
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2024 Your Portfolio. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- JavaScript 파일 연결 -->
+    <script src="./01script.js"></script>
   </body>
 </html>
