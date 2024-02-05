@@ -26,6 +26,9 @@ body {
   top: 50vh;
   left: 10vh;
 }
+.main-content {
+  background-color: #2950;
+}
 
 .star-container {
   display: flex;
