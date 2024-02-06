@@ -4,6 +4,7 @@
 body {
   font-family: "PyeongChangPeace-Light", serif;
   margin: 0;
+  height: 3000px; /*높이값 일단 많이^*/
 }
 
 /* 표지 스타일링 */

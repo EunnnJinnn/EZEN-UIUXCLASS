@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+li {
+  list-style: none;
+}
+.colors {
+}
+.colors li:nth-child(1) {
+  width: 20px;
+  height: 20px;
+  background: palegreen;
+}
+.colors li:nth-child(2) {
+  width: 20px;
+  height: 20px;
+  background: palevioletred;
+}
+.colors li:nth-child(3) {
+  width: 20px;
+  height: 20px;
+  background: palegoldenrod;
+}
+.colors li:nth-child(4) {
+  width: 20px;
+  height: 20px;
+  background: powderblue;
+}
+.colors li:nth-child(5) {
+  width: 20px;
+  height: 20px;
+  background: palevioletred;
+}
