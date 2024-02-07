@@ -1,261 +1,34 @@
-body {
-  font-family: "Arial", sans-serif;
-  margin: 0;
+@import url(./01font.css);
+
+* {
   padding: 0;
+  margin: 0;
   box-sizing: border-box;
-  background-color: #f4ebdc;
-  color: #333;
 }
 
-.container {
-  width: 80%;
-  margin: 0 auto;
+body {
+  font-family: "PyeongChangPeace-Light", serif;
+  font-weight: 300;
 }
-
-header {
-  background-color: rgb(40, 57, 83);
-  color: #fff;
-  padding: 1rem 0;
-  text-align: center;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-header h1 {
-  margin: 0;
-  font-size: 1.8rem;
-}
-header nav ul {
-  list-style: none;
-  padding: 0;
-}
-header nav ul li {
-  display: inline-block;
-  margin-right: 20px;
-}
-header nav ul li a {
-  text-decoration: none;
-  color: #fff;
-  font-size: 1rem;
-  transition: color 0.3s ease;
-}
-header nav ul li a:hover {
-  color: rgb(176, 188, 206);
-}
-
-section {
-  padding: 3rem 0;
-}
-section h2 {
-  color: rgb(40, 57, 83);
-  font-size: 2rem;
-  margin-bottom: 20px;
-}
-section p {
-  color: #666;
-  font-size: 1.2rem;
-  line-height: 1.6;
-}
-
-.cover {
-  background-image: url("./img/main1-item.png");
-  background-size: cover;
-  background-position: center;
-  color: #fff;
-  text-align: center;
+.cover-page {
   height: 100vh;
+  background: #283953;
+  color: #f4ebdc;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  /* justify-content: center;
+  align-items: center; */
+}
+.cover-img {
   justify-content: center;
+  align-items: center;
 }
-.cover h2 {
-  font-size: 3rem;
-  margin-bottom: 10px;
-}
-.cover p {
-  font-size: 1.5rem;
-  margin-bottom: 20px;
-}
-.cover .cta-button {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: rgb(40, 57, 83);
-  color: #fff;
-  text-decoration: none;
-  border-radius: 8px;
-  transition: background-color 0.3s ease;
-}
-.cover .cta-button:hover {
-  background-color: rgb(176, 188, 206);
-}
-
-.hero {
-  background-color: #f4ebdc;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-  padding: 2rem;
-}
-.hero h2 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
-}
-.hero p {
-  font-size: 1.2rem;
-}
-
-.about-me {
-  background-color: #fff;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-  padding: 2rem;
-}
-.about-me p {
-  font-size: 1.2rem;
-  line-height: 1.6;
-}
-
-.projects {
-  background-color: #fff;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-  padding: 2rem;
-}
-.projects h2 {
-  color: rgb(40, 57, 83);
-  font-size: 2rem;
-  margin-bottom: 20px;
-}
-.projects .project-card {
-  background-color: #f4ebdc;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-  padding: 1.5rem;
-  margin-bottom: 20px;
-}
-.projects .project-card h3 {
-  color: rgb(40, 57, 83);
-}
-.projects .project-card p {
-  color: #666;
-  line-height: 1.6;
-}
-.projects .project-card a {
-  display: inline-block;
-  margin-top: 10px;
-  padding: 10px 15px;
-  background-color: rgb(40, 57, 83);
-  color: #fff;
-  text-decoration: none;
-  border-radius: 8px;
-  transition: background-color 0.3s ease;
-}
-.projects .project-card a:hover {
-  background-color: rgb(176, 188, 206);
-}
-
-.contact {
-  background-color: rgb(40, 57, 83);
-  color: #fff;
-  border-radius: 8px;
-  padding: 2rem;
-}
-.contact h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-}
-.contact p {
-  font-size: 1.2rem;
-  line-height: 1.6;
-}
-
-footer {
-  background-color: rgb(40, 57, 83);
-  color: #fff;
+.cover-title {
+  position: absolute;
+  bottom: 100px;
+  left: 800px;
+  font-size: 80px;
+  letter-spacing: 20px;
   text-align: center;
-  padding: 1rem 0;
-  width: 100%;
-  box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+  justify-content: center;
+  align-items: center;
 }
-footer p {
-  font-size: 0.8rem;
-}
-
-@media screen and (min-width: 769px) {
-  .container {
-    width: 80%;
-  }
-  header {
-    position: fixed;
-    width: 100%;
-    z-index: 1000;
-  }
-  header nav ul {
-    text-align: center;
-  }
-  header nav ul li {
-    display: inline-block;
-    margin-right: 20px;
-  }
-  header nav ul li a {
-    font-size: 1rem;
-  }
-  .hero h2 {
-    font-size: 2.5rem;
-  }
-  .hero p {
-    font-size: 1.2rem;
-  }
-  .project-card {
-    padding: 1.5rem;
-  }
-  footer {
-    font-size: 0.8rem;
-  }
-}
-@media screen and (min-width: 481px) and (max-width: 768px) {
-  .container {
-    width: 90%;
-  }
-  header nav ul {
-    text-align: center;
-  }
-  header nav ul li {
-    display: block;
-    margin: 10px 0;
-  }
-  .hero h2 {
-    font-size: 2rem;
-  }
-  .hero p {
-    font-size: 1rem;
-  }
-  .project-card {
-    padding: 1.5rem;
-  }
-  footer {
-    font-size: 0.8rem;
-  }
-}
-@media screen and (max-width: 480px) {
-  .container {
-    width: 90%;
-  }
-  header nav ul {
-    text-align: center;
-  }
-  header nav ul li {
-    display: block;
-    margin: 10px 0;
-  }
-  .hero h2 {
-    font-size: 2rem;
-  }
-  .hero p {
-    font-size: 1rem;
-  }
-  .project-card {
-    padding: 1rem;
-  }
-  footer {
-    font-size: 0.8rem;
-  }
-}/*# sourceMappingURL=01style.css.map */
