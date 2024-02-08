@@ -1,0 +1,78 @@
+@import url(./01font.css);
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "PyeongChangPeace-Light", serif;
+  font-weight: 300;
+}
+.cover-page {
+  height: 100vh;
+  background: #283953;
+  color: #f4ebdc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.cover-img {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  width: 357px;
+  height: 426px;
+  overflow: hidden;
+}
+.cover-img img {
+  width: 357px;
+  height: 426px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.cover-item01,
+.cover-item02,
+.cover-item03,
+.cover-item04,
+.cover-item05 {
+  width: 34px;
+  height: 46px;
+  position: absolute;
+}
+.cover-item01 {
+  width: 60px;
+  height: 76px;
+  float: left;
+  top: 50%;
+  left: 50%;
+}
+.cover-item02 {
+  top: 51px;
+  left: 783px;
+}
+.cover-item03 {
+  top: 273px;
+  left: 396px;
+}
+.cover-item04 {
+  width: 60px;
+  height: 78px;
+  top: 277px;
+  right: 1475px;
+}
+
+.cover-title h1 {
+  position: absolute;
+  display: block;
+  letter-spacing: 40px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  bottom: 20px;
+  left: 470px;
+  font-size: 200px;
+}

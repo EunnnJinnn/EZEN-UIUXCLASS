@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap");
+/*---------reset------------ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* reset의 하위개념 공통적인 부분을 설정, 설정을 줄 때는 body안에있는 태그에 적용 */
+body {
+  background: darkslategrey;
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 300;
+  color: #fff;
+}
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+section article {
+  width: 980px;
+  height: 500px;
+}
+/*--------- heading------------ */
+.heading {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.heading span {
+  color: darkred;
+  font-size: 24px;
+}
+.heading h1 {
+  font-size: 36px;
+  margin-top: 10px; /* 위에 태그가 span이여서 바로 h1에서 마진을 줌*/
+}
+.heading h1 em {
+  /*옵셔널한 속성을 설정하기 위해 i,em 사용*/
+  font-style: normal;
+  position: relative;
+}
+.heading h1 em::after {
+  content: url(./images/logo-kakao.png); /* 전후문자 선택자를 사용하면 반드시 사용*/
+  position: absolute;
+  top: -25px; /*위로 올라가면 음수*/
+  right: -30px;
+}
+/*--------- content------------ */
+.content {
+  overflow: hidden; /* 자식에서 float를 줬을 경우 부모에게 overflow: hidden;*/
+}
+.content > div {
+  /* 자손으로 줘야함*/
+  width: 50%;
+  height: 400px;
+  float: left; /* 자식에서 float를 줬을 경우 부모에게 overflow: hidden;*/
+}
+.title {
+  cursor: pointer;
+  border: 1px solid darkseagreen;
+  border-radius: 3px;
+  margin-bottom: 10px;
+  padding: 5px;
+  padding-left: 15px;
+  transition: all 0.3s;
+  overflow: hidden;
+}
+.title::after {
+  content: "\f105"; /* 유니코드 앞에 '\' 사용해줘야함 */
+  font-family: fontawesome;
+  float: right;
+  margin-right: 5px;
+}
+.title.active::after {
+  /**/
+  transform: rotate(90deg);
+  color: darkred;
+}
+.title:hover,
+.title.active {
+  background: darkseagreen;
+  color: darkred;
+}
+
+.desc {
+  padding: 15px;
+  display: none;
+}
+.desc.active {
+  display: block;
+}
+.image {
+  text-align: right;
+}
+.image img {
+  height: 370px;
+}
