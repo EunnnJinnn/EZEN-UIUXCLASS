@@ -1,0 +1,339 @@
+/* style.css */
+@import url(./01font.css);
+
+/* common style */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "PyeongChangPeace-Light", serif;
+  font-weight: 300;
+}
+/* .cover-page */
+
+.cover-page {
+  height: 100vh;
+  background: #283953;
+  color: #f4ebdc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.cover-img {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  width: 357px;
+  height: 426px;
+}
+.cover-img img {
+  width: 357px;
+  height: 426px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.cover-item01 {
+  position: absolute;
+  width: 50px;
+  height: 60px;
+  float: left;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -405%);
+}
+.cover-item02 {
+  position: absolute;
+  width: 50px;
+  height: 60px;
+  float: left;
+  top: 50%;
+  left: 20%;
+  transform: translate(-20%, 250%);
+  width: 40px;
+  height: 55px;
+  /* display: block;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 40px;
+  height: 55px;
+  bottom: 30%;
+  left: 20%; */
+}
+.cover-item02 img {
+  text-align: center;
+  display: flex;
+}
+.cover-item03 {
+  display: flex;
+  position: absolute;
+  width: 40px;
+  height: 55px;
+  float: left;
+  top: 30%;
+  left: 33%;
+}
+.cover-item04 {
+  display: flex;
+  position: absolute;
+  width: 60px;
+  height: 80px;
+  float: left;
+  top: 25%;
+  right: 25%;
+}
+.cover-item05 {
+  display: flex;
+  position: absolute;
+  width: 30px;
+  height: 50px;
+  float: left;
+  bottom: 25%;
+  right: 10%;
+}
+.cover-title {
+  position: relative;
+  left: -10rem;
+  bottom: -40%;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.cover-title h1 {
+  position: absolute;
+  letter-spacing: 20px;
+  font-size: 70px;
+  font-weight: normal;
+}
+
+/* nav */
+.navbar {
+  position: fixed; /* fixed 로  변경*/
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #f4ebdc;
+  padding: 1.5vh;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 3;
+}
+.logo img {
+  max-height: 35px;
+  margin-left: 5vh;
+  transition: all 0.2s ease;
+}
+.logo img:hover {
+  max-height: 40px;
+}
+.menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 3% 0;
+  display: flex;
+}
+.menu li {
+  margin-right: 50px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #283953;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: all 0.5s ease;
+}
+
+.menu a:hover {
+  font-size: 1.5rem;
+  border-bottom: 2px solid #283953;
+}
+
+/* info-content */
+.info-content {
+  height: 100vh;
+  background-color: #f4ebdc;
+}
+
+.info-content h2 {
+  font-size: 50px;
+  padding: 40px;
+  color: #283953;
+  font-weight: normal;
+}
+.info-img {
+  position: absolute;
+  display: flex;
+  width: 300px;
+  top: 140%;
+  left: 15%;
+}
+.info-text {
+  position: relative;
+  font-size: 1.5rem;
+  display: flex;
+}
+.info-t {
+  position: absolute;
+  display: flex;
+  top: 30%;
+  left: 45%;
+  z-index: 1;
+  line-height: 170%;
+  /* position: absolute;
+  display: flex;
+  margin: 40px;
+  top: 65rem;
+  left: 40rem;
+  line-height: 200%;
+  float: left;
+  z-index: 1;
+  width: 400px;
+  height: 300px; */
+  color: #f4ebdc;
+}
+
+.info-subimg {
+  position: absolute;
+  width: 30px;
+  height: 50px;
+  float: left;
+  bottom: -60%;
+  right: 5%;
+}
+.ellipese01 {
+  display: flex;
+  position: absolute;
+  bottom: -120%;
+  right: 1%;
+  transform: rotate(45deg);
+  overflow: hidden;
+}
+.ellipese02 {
+  display: flex;
+  position: absolute;
+  bottom: -110%;
+  right: -4%;
+  transform: rotate(40deg);
+  overflow: hidden;
+}
+.ellipese03 {
+  display: flex;
+  position: absolute;
+  bottom: -100%;
+  right: -9%;
+  transform: rotate(35deg);
+  overflow: hidden;
+}
+/* info-balloon */
+
+.balloon {
+  position: relative;
+  display: flex;
+  margin: 50px;
+  width: 400px;
+  height: 300px;
+  background: #283953;
+  border-radius: 10px;
+  top: -50%;
+  right: -40%;
+}
+
+.balloon:after {
+  border-top: 0px solid transparent;
+  border-left: 30px solid transparent;
+  border-right: 30px solid #283953;
+  border-bottom: 40px solid #283953;
+  border-radius: 5px;
+  content: "";
+  position: absolute;
+  bottom: 15px;
+  left: -20px;
+}
+
+/* edu-page */
+.edu-content {
+  background: #283953;
+  height: 100vh;
+}
+.edu-content h2 {
+  font-size: 50px;
+  padding: 40px;
+  color: #f4ebdc;
+  font-weight: normal;
+}
+.c {
+  width: 450px;
+  height: 260px;
+  display: block;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  top: 240%;
+  left: 37%;
+  background: #fff;
+  border-radius: 25px;
+}
+.edu-content h3 {
+  position: absolute;
+  top: 244%;
+  left: 39%;
+  font-size: 30px;
+  font-weight: normal;
+  color: #283953;
+}
+.edu-content .fa-solid {
+  position: absolute;
+  top: 244%;
+  left: 63%;
+  font-size: 25px;
+  color: #283953;
+}
+.eduimg01 {
+  position: absolute;
+  width: 90px;
+  height: 110px;
+  top: 254%;
+  left: 39%;
+  border: 1px solid #283953;
+  border-radius: 10px;
+}
+.edu-t01 {
+  position: absolute;
+  top: 258%;
+  left: 48%;
+  font-size: 22px;
+  font-weight: normal;
+}
+.edu-t02 {
+  position: absolute;
+  top: 270%;
+  left: 49%;
+  font-size: 18px;
+  font-weight: normal;
+}
+
+/* 데스크탑 화면 크기 */
+@media (min-width: 1024px) {
+  /* 추가적인 데스크탑 화면 스타일링 */
+}
+
+/* 태블릿 화면 크기 */
+@media (min-width: 768px) and (max-width: 1023px) {
+  /* 추가적인 태블릿 화면 스타일링 */
+}
+
+/* 모바일 화면 크기 */
+@media (max-width: 767px) {
+  /* 추가적인 모바일 화면 스타일링 */
+}
