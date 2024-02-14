@@ -44,3 +44,31 @@ $(".project-photo").slick({
   autoplay: true,
   cssEase: "linear",
 });
+
+// header > trriger btn  미디어 쿼리 - 모바일 trigger
+
+$(".trigger").click(function () {
+  $(this).toggleClass("active"); /* 위에있는 선택자 불러옴 */
+  $(".gnb").toggleClass("active");
+});
+
+// 모바일 trigger 메뉴 선택 시 자동으로 닫힘
+$(".menu a").click(function () {
+  $(".gnb").removeClass("active");
+  $(".trigger").removeClass("active");
+});
+
+// scrollTo : header > trriger btn trigger 메뉴 선택 후 부드럽게 이동하는 효과
+$(".menu a").click(function () {
+  $.scrollTo(this.hash || 0, 900); /* 900 = 0.9s */
+});
+
+// headaer scroll event / jquery
+/* () => 조건식 */
+$(window).scroll(function () {
+  if ($(window).scrollTop() > 50) {
+    $("header").addClass("active");
+  } else {
+    $("header").removeClass("active");
+  }
+});
