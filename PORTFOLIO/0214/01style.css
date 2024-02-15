@@ -105,8 +105,8 @@ h2 {
 }
 .cover-title {
   position: relative;
-  left: -10rem;
-  bottom: -40%;
+  left: -150px;
+  bottom: -290px;
   text-align: center;
   justify-content: center;
   align-items: center;
@@ -116,7 +116,7 @@ h2 {
 .cover-title h1 {
   position: absolute;
   letter-spacing: 20px;
-  font-size: 70px;
+  font-size: 80px;
   font-weight: normal;
 }
 
@@ -136,7 +136,7 @@ h2 {
 }
 .logo img {
   max-height: 35px;
-  margin-left: 5vh;
+  margin-left: 50px;
   transition: all 0.2s ease;
 }
 .logo img:hover {
@@ -145,7 +145,7 @@ h2 {
 .menu ul {
   list-style: none;
   margin: 0;
-  padding: 3% 0;
+  padding: 25px 0;
   display: flex;
 }
 .menu li {
@@ -156,12 +156,12 @@ h2 {
   text-decoration: none;
   color: #283953;
   font-weight: bold;
-  font-size: 1rem;
+  font-size: 17px;
   transition: all 0.5s ease;
 }
 
 .menu a:hover {
-  font-size: 1.5rem;
+  font-size: 22px;
   border-bottom: 2px solid #283953;
 }
 
@@ -341,7 +341,9 @@ h2 {
   align-items: center;
   justify-content: center;
 }
-/* edu-card02 */
+
+/* ##### edu-card02 ##### */
+
 .edu-card02 {
   display: flex;
   width: 100%;
@@ -417,7 +419,8 @@ h2 {
   justify-content: center;
 }
 
-/* GROWTH */
+/* ##### GROWTH  #####*/
+
 .growth-page {
   background: #f4ebdc;
   height: 100vh;
@@ -511,7 +514,9 @@ h2 {
   font-size: 23px;
   letter-spacing: 0.3rem;
 }
-/* favorite-page */
+
+/* ##### favorite-page ##### */
+
 .favorite-content {
   background: #283953;
   color: #f4ebdc;
@@ -526,6 +531,8 @@ h2 {
   /* height: 100vh; */
   border: 1px solid #f00;
 }
+
+/* ##### favorite card01 ##### */
 .favorite-card01 {
   background: #f4ebdc;
   width: 320px;
@@ -533,10 +540,15 @@ h2 {
   border-radius: 2rem;
   position: relative;
   display: flex;
-  top: 0%;
+  top: 10%;
   left: 10%;
 }
-.fa-card01 img {
+
+.fa-cardcontent01-1 {
+  width: 100%;
+  height: 100%;
+}
+.fa-cardcontent01 img {
   position: absolute;
   top: 28%;
   left: 50%;
@@ -546,12 +558,13 @@ h2 {
   align-items: center;
   justify-content: center;
 }
-.fa-card01 > span {
+.fa-cardctitle > span {
   position: absolute;
   color: #283953;
+  width: 100%;
   height: 1.5rem;
   top: 54%;
-  left: 15%;
+  left: 0%;
   font-size: 23px;
   text-align: center;
   letter-spacing: 0.1rem;
@@ -590,31 +603,32 @@ h2 {
   background: #283953;
   border-radius: 5px 0 0 5px;
 }
+.fa-cardcp01 {
+  position: absolute;
+  bottom: 20%;
+  left: 25%;
+  color: #283953;
+  font-size: 30px;
+  /* justify-content: space-between; */
+  /* border: 1px solid #f00; */
+}
+.fa-cardcp01 .fa-backward {
+  width: 60px;
+  /* border: 1px solid #f00; */
+}
+.fa-cardcp01 .fa-pause {
+  width: 50px;
+  /* border: 1px solid #f00; */
+}
+.fa-cardcp01 .fa-forward {
+  width: 50px;
+  /* border: 1px solid #f00; */
+}
+.fa-cardcp01 .fa-headphones-simple {
+  width: 50px;
+  /* border: 1px solid #f00; */
+}
 
-.favorite-content .fa-backward {
-  position: absolute;
-  bottom: -550%;
-  left: 30px;
-  font-size: 30px;
-}
-.favorite-content .fa-pause {
-  position: absolute;
-  bottom: -550%;
-  left: 90px;
-  font-size: 30px;
-}
-.favorite-content .fa-forward {
-  position: absolute;
-  bottom: -550%;
-  left: 140px;
-  font-size: 30px;
-}
-.favorite-content .fa-headphones-simple {
-  position: absolute;
-  bottom: -550%;
-  left: 190px;
-  font-size: 30px;
-}
 .line01-3 {
   position: absolute;
   bottom: 10%;
@@ -627,24 +641,38 @@ h2 {
 .line01-4 {
   position: absolute;
   bottom: 10%;
-  left: 15%;
+  left: 14%;
   width: 90px;
   height: 6px;
   background: #283953;
   border-radius: 5px 0 0 5px;
 }
-.favorite-content .fa-volume-off {
+
+.fa-cardcpl01-1 {
+  width: 100%;
+  height: 100px;
   position: absolute;
-  bottom: -810%;
-  left: -20px;
+  bottom: 8%;
+}
+
+.fa-cardcpl01-1 .fa-volume-off {
+  color: #000;
   font-size: 20px;
+  position: absolute;
+  bottom: 3px;
+  left: 25px;
 }
 .favorite-content .fa-volume-high {
   position: absolute;
-  bottom: -810%;
-  right: -255px;
+  bottom: 3px;
+  right: 15px;
+  width: 30px;
   font-size: 20px;
+  color: #000;
 }
+
+/* ##### favorite card02 ##### */
+
 .favorite-card02 {
   background: #f4ebdc;
   width: 320px;
@@ -652,12 +680,14 @@ h2 {
   border-radius: 2rem;
   position: relative;
   display: flex;
-  top: 0%;
+  top: 10%;
   left: 10%;
 }
+
 .fa-cardcontent02-1 {
   width: 100%;
   height: 100%;
+  display: flex;
 }
 .fa-cardcontent02 img {
   position: absolute;
@@ -672,9 +702,10 @@ h2 {
 .fa-cardctitle > span {
   position: absolute;
   color: #283953;
+  width: 100%;
   height: 1.5rem;
   top: 54%;
-  left: 15%;
+  left: 0%;
   font-size: 23px;
   text-align: center;
   letter-spacing: 0.1rem;
@@ -719,6 +750,22 @@ h2 {
   left: 15%;
   color: #283953;
 }
+.fa-cardcp02 .fa-backward {
+  width: 60px;
+  /* border: 1px solid #f00; */
+}
+.fa-cardcp02 .fa-pause {
+  width: 50px;
+  /* border: 1px solid #f00; */
+}
+.fa-cardcp02 .fa-forward {
+  width: 50px;
+  /* border: 1px solid #f00; */
+}
+.fa-cardcp02 .fa-headphones-simple {
+  width: 50px;
+  /* border: 1px solid #f00; */
+}
 
 .line02-3 {
   position: absolute;
@@ -738,36 +785,13 @@ h2 {
   background: #283953;
   border-radius: 5px 0 0 5px;
 }
-/* .fa-cardcpl02-1 {
-  position: absolute;
-  bottom: 20%;
-  left: 15%;
-  width: 100%;
-  height: 20px;
-  border: 1px solid #f00;
-} */
+
 .fa-cardcpl02-1 {
   width: 100%;
   height: 100px;
   position: absolute;
-  bottom: 0;
-  border: 1px solid #f00;
-  /* position: absolute;
-  bottom: 0;
-  left: auto;
-  color: #283953;
-  width: 100%;
-  height: 100px;
-  border: 1px solid #f00; */
+  bottom: 8%;
 }
-
-/* .fa-cardcpl02-1 .fa-solid {
-  position: absolute;
-  display: flex;
-  bottom: 10%;
-  left: 1%;
-  border: 1px solid #f00;
-} */
 
 .fa-cardcpl02-1 .fa-volume-off {
   color: #000;
@@ -783,4 +807,144 @@ h2 {
   width: 30px;
   font-size: 20px;
   color: #000;
+}
+/* ##### favorite card03 ##### */
+
+.favorite-card03 {
+  background: #f4ebdc;
+  width: 320px;
+  height: 520px;
+  border-radius: 35px;
+  position: relative;
+  display: flex;
+  top: 0;
+  left: 0;
+}
+
+.fa-cardcontent03-1 {
+  width: 320px;
+  height: 520px;
+  border: 1px solid #f00;
+}
+.fa-cardcontent03 img {
+  position: absolute;
+  top: 145px;
+  left: 160px;
+  transform: translate(-50%, -50%);
+  height: 250px;
+  border-radius: 15px;
+  align-items: center;
+  justify-content: center;
+}
+.fa-cardctitle > span {
+  position: absolute;
+  color: #283953;
+  width: 320px;
+  height: 15px;
+  top: 280px;
+  left: 0;
+  font-size: 23px;
+  text-align: center;
+  letter-spacing: 2px;
+}
+.fa-text03 {
+  color: #283953;
+  display: flex;
+  position: absolute;
+  bottom: 171px;
+  left: 21px;
+  font-size: 12px;
+}
+.fa-text03-2 {
+  color: #283953;
+  display: flex;
+  position: absolute;
+  bottom: 171px;
+  right: 21px;
+  font-size: 13px;
+}
+.line03 {
+  position: absolute;
+  top: 338px;
+  left: 65px;
+  width: 190px;
+  height: 6px;
+  background: #b0bcce;
+  border-radius: 5px;
+}
+.line03-2 {
+  position: absolute;
+  top: 338px;
+  left: 65px;
+  width: 170px;
+  height: 6px;
+  background: #283953;
+  border-radius: 5px 0 0 5px;
+}
+
+.fa-cardcp03 {
+  position: absolute;
+  bottom: 95px;
+  left: 70px;
+  color: #283953;
+  font-size: 30px;
+  border: 1px solid #f00;
+}
+.fa-cardcp03 .fa-backward {
+  width: 60px;
+  border: 1px solid #f00;
+}
+.fa-cardcp03 .fa-pause {
+  width: 50px;
+  border: 1px solid #f00;
+}
+.fa-cardcp03 .fa-forward {
+  width: 50px;
+  border: 1px solid #f00;
+}
+.fa-cardcp03 .fa-headphones-simple {
+  width: 50px;
+  border: 1px solid #f00;
+}
+
+.line03-3 {
+  position: absolute;
+  bottom: 10px;
+  left: 45px;
+  width: 220px;
+  height: 6px;
+  background: #b0bcce;
+  border-radius: 5px;
+}
+.line03-4 {
+  position: absolute;
+  bottom: 10px;
+  left: 45px;
+  width: 150px;
+  height: 6px;
+  background: #283953;
+  border-radius: 5px 0 0 5px;
+}
+
+.fa-cardcpl03-1 {
+  width: 320px;
+  height: 100px;
+  position: absolute;
+  bottom: 35px;
+}
+
+.fa-cardcpl03-1 .fa-volume-off {
+  color: #283953;
+  font-size: 20px;
+  position: absolute;
+  bottom: 3px;
+  left: 25px;
+}
+.favorite-content .fa-volume-high {
+  position: absolute;
+  bottom: 3px;
+  right: 15px;
+  width: 30px;
+  font-size: 20px;
+  color: #283953;
 }
