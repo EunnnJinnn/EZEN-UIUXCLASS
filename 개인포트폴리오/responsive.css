@@ -1,0 +1,17 @@
+@media screen and (max-width: 768px) {
+  .cover-page {
+    height: 100vh;
+  }
+  .cover-page > div {
+    height: auto;
+  }
+  .cover-content {
+    position: static;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+
+/* header */
+.
