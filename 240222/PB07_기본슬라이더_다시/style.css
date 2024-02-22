@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: black;
+  color: aliceblue;
+}
+h1 {
+  margin: 20px;
+  color: pink;
+}
+#container {
+  border: 2px solid pink;
+  border-radius: 10px;
+  width: 600px;
+  height: 300px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /*수직에서의 센터*/
+}
+
+.arrow {
+  z-index: 100;
+  font-size: 2rem;
+  background: lightpink;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border-radius: 50px;
+  opacity: 0.2;
+  transition: opacity 0.3s;
+}
+.arrow:hover {
+  opacity: 1;
+}
