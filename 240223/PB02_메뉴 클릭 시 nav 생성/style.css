@@ -1,0 +1,54 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  width: 100vw;
+  overflow: hidden;
+}
+
+button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  border: none;
+  background: pink;
+  color: #fff;
+  padding: 15px;
+  cursor: pointer;
+  /* display: none; */
+  transition: all 0.3s;
+}
+button.active {
+  transform: translateX(-110px);
+}
+
+nav {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: pink;
+  height: 100vh;
+  padding: 2em;
+  transform: translateX(100%); /* 하단에 스크롤바가 생김 body에서 값주기 */
+  transition: transform 0.3s;
+}
+nav.active {
+  transform: translateX(0);
+}
+
+nav li {
+  padding: 1rem 0;
+}
+nav li a {
+  color: #fff;
+}
