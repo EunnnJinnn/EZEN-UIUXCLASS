@@ -32,15 +32,15 @@ switch (day1) {
     break;
 }
 
-displayDate.innerText = `${year} 년 ${month} 월 ${date} 일  <span style="font-weight:bold">${day2}</span>`;
+displayDate.innerHTML = `${year} 년 ${month} 월 ${date} 일  <span style="font-weight:bold">${day2}</span>`;
 
 const displayTime = document.querySelector("#clock");
 
 const clock = () => {
   let current = new Date();
-  let hrs = today.getHours();
-  let mins = today.getMinutes();
-  let secs = today.getMinutes();
+  let hrs = current.getHours();
+  let mins = current.getMinutes();
+  let secs = current.getSeconds();
 
   let period = "AM";
   if (hrs === 0) {
