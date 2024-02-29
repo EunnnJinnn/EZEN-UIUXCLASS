@@ -1,0 +1,61 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+li {
+  list-style: none;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.icon {
+  width: 120px;
+  height: 125px;
+  margin: 10px;
+  position: relative;
+}
+.icon span {
+  position: absolute;
+  top: -80px;
+  left: 0;
+  transform: translateX(-50%);
+  width: 300px;
+  text-align: center;
+  background: #222;
+  color: powderblue;
+  padding: 10px;
+  border-radius: 10px;
+  opacity: 0;
+  transition: all 0.5s;
+}
+.icon span::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -5px;
+  transform: translateX(-50%) rotate(45deg);
+  width: 10px;
+  height: 10px;
+  background: #222;
+}
+.icon:hover span {
+  opacity: 1;
+}
