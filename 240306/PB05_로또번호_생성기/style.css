@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  gap: 20px;
+}
+h1 {
+  font-weight: bold;
+}
+button {
+  width: 100px;
+  padding: 20px;
+  font-size: 1.2rem;
+  background: none;
+  border-radius: 10px;
+  border: 3px solid darkgreen;
+}
+#result {
+  color: red;
+  font-size: 50px;
+}
