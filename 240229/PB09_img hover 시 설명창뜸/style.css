@@ -3,21 +3,14 @@
   padding: 0;
   box-sizing: border-box;
 }
+li {
+  list-style: none;
+}
 a {
   text-decoration: none;
   color: inherit;
 }
-li {
-  list-style: none;
-}
-/* 
-body {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-} */
+
 .gallery {
   display: flex;
   height: 100vh;
@@ -25,6 +18,7 @@ body {
 .gallery li {
   border-right: 5px solid #000;
   flex: 1;
+  position: relative;
   overflow: hidden;
   transition: all 0.5s;
 }
@@ -32,27 +26,26 @@ body {
   border-right: none;
 }
 .gallery li:nth-child(1) {
-  background: url(./imges/iu01.jpg) center center no-repeat;
+  background: url("./imges/iu01.jpg") center center no-repeat;
 }
 .gallery li:nth-child(2) {
-  background: url(./imges/iu02.jpg) center center no-repeat;
+  background: url("./imges/iu02.jpg") center center no-repeat;
 }
 .gallery li:nth-child(3) {
-  background: url(./imges/iu03.jpg) center center no-repeat;
+  background: url("./imges/iu03.jpg") center center no-repeat;
 }
 .gallery li:nth-child(4) {
-  background: url(./imges/iu04.jpg) center center no-repeat;
-  width: 1000px;
+  background: url("./imges/iu04.jpg") center center no-repeat;
 }
 .gallery li:nth-child(5) {
-  background: url(./imges/iu05.jpg) center center no-repeat;
+  background: url("./imges/iu05.jpg") center center no-repeat;
 }
 .gallery:hover li {
   flex: 1;
 }
 .gallery li:hover {
   flex: 3;
-  filter: saturate(0.1);
+  filter: saturate(0.2);
 }
 .content {
   position: absolute;

@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+li {
+  list-style: none;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.slide_wrapper {
+  width: 660px;
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+  /* border: 1px solid powderblue; */
+}
+.slides {
+  position: absolute;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  /* border: 1px solid powderblue; */
+  /* background: powderblue; */
+}
+.slides.animated {
+  transition: all 0.5s ease-out;
+}
+
+.slides li {
+  width: 200px;
+  height: 200px;
+  background: pink;
+  float: left;
+}
+/* 마지막만 빼고 적용 */
+.slides li:not(:last-child) {
+  margin-right: 30px;
+}
+.controls {
+  margin-top: 50px;
+  text-align: center;
+}
+.controls span {
+  background: powderblue;
+  color: #fff;
+  margin: 0 10px;
+  padding: 10px 20px;
+}
