@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.3.2/uuidv4.min.js"></script>
     <!-- costom -->
     <link rel="stylesheet" href="./style.css" />
     <script defer src="./script.js"></script>
@@ -16,7 +17,7 @@
         method="post"
       >
         <input type="text" placeholder="할 일을 입력해주세요," />
-        <input type="submit" value="할 일 추가" />
+        <input type="submit" value="할 일 추가✍🏻" />
       </form>
       <div class="blocks">
         <div class="block">
@@ -25,11 +26,11 @@
         </div>
         <div class="block">
           <h2>🏃🏻‍♂️DOING</h2>
-          <div id="todo" class="list"></div>
+          <div id="doing" class="list"></div>
         </div>
         <div class="block">
-          <h2>DONE</h2>
-          <div id="todo" class="list"></div>
+          <h2>🤭DONE</h2>
+          <div id="done" class="list"></div>
         </div>
       </div>
     </div>
