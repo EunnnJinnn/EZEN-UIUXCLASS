@@ -1,18 +1,21 @@
-$complete-btn: powderblue;
-$loading-btn: lightblue;
-$error-btn: blue;
-$notice-btn-hover: ;
+/* variables */
+$complete-btn: royalblue;
+$loading-btn: green;
+$error-btn: crimson;
+$notice-btn-hover: #000;
+$notice-btn-fs: 18px;
 
+/* common */
 body {
   margin: 0;
   padding: 0;
   display: flex;
   justify-content: center;
-  align-content: center;
+  align-items: center;
   height: 100vh;
 }
 
-// template
+/* template */
 @mixin notice-button {
   font-size: $notice-btn-fs;
   width: 150px;
@@ -26,18 +29,28 @@ body {
     color: #fff;
   }
   &.loading:hover {
-    baackground: $loading-btn;
+    background: $loading-btn;
+    color: #fff;
+  }
+  &.error:hover {
+    background: $error-btn;
     color: #fff;
   }
 }
 
-// indivisual
+/* indivisual */
 .complete {
   @include notice-button;
+  border: 2px solid $complete-btn;
+  color: $complete-btn;
 }
 .loading {
   @include notice-button;
+  border: 2px solid $loading-btn;
+  color: $loading-btn;
 }
 .error {
   @include notice-button;
+  border: 2px solid $error-btn;
+  color: $error-btn;
 }

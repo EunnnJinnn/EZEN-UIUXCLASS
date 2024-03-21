@@ -15,14 +15,13 @@ body {
   padding: 20px;
   width: 350px;
   background: #fff;
-  border-radius: 10px;
 }
 .signin .sign-inner input[type=button],
 .signin .sign-inner input[type=email],
 .signin .sign-inner input[type=password],
 .signin .sign-inner input[type=submit] {
   display: block;
-  width: 90%;
+  width: 95%;
   padding: 10px;
   margin: 10px 0;
   border: 1px solid #ddd;
@@ -37,7 +36,6 @@ body {
 .signin .sign-inner input[type=button]:hover {
   background: powderblue;
   color: #fff;
-  width: 100%;
 }
 .signin .sign-inner input[type=email]:focus,
 .signin .sign-inner input[type=password]:focus {
