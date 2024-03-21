@@ -9,24 +9,26 @@
 // });
 
 const pics = document.querySelectorAll(".testimonial-pic img");
-const contents - document .querySelectorAll(".testimonil .content");
+const contents = document.querySelectorAll(".testimonial .content");
 
-pics.forEach((pic)) =>{
-  pic.addEventlistener("click", function () {
+pics.forEach((pic) => {
+  pic.addEventListener("click", function () {
     function siblings(t) {
-      const children = t.parentElement.childrem;
-      for (let i = 0; 1 < children.length i++) {
+      const children = t.parentElement.children;
+      for (let i = 0; i < children.length; i++) {
         children[i].classList.remove("active");
-      } 
+      }
     }
     siblings(this);
     this.classList.add("active");
-  contents.forEach(function (content) {
-    content.classList.remove("active");
-  });
-  const  targetContent = document.querySelector('#${targetcontentid}');
-  if (targetContent) {
-    targetContent,classList.add("active");
-  }
+
+    contents.forEach(function (content) {
+      content.classList.remove("active");
+    });
+    const targetContentId = this.getAttribute("data-alt");
+    const targetContent = document.querySelector(`#${targetContentId}`);
+    if (targetContent) {
+      targetContent.classList.add("active");
+    }
   });
 });
