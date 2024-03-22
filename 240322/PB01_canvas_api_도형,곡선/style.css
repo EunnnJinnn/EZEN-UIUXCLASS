@@ -1,0 +1,16 @@
+@import url(./reset.css);
+
+/* body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+} */
+
+
+canvas {
+  /* background: powderblue; */
+  width: 400px;
+  height: 300px;
+  /* border: 1px solid plum; */
+}

@@ -1,0 +1,54 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+li {
+  list-style: none;
+}
+
+body {
+  background: rgb(26, 63, 119);
+  color: rgb(227, 227, 227);
+}
+
+#container {
+  width: 500px;
+  margin: 10px auto;
+}
+form fieldset {
+  margin-bottom: 25px;
+  padding: 20px;
+}
+form legend {
+  font-size: 15px;
+  font-weight: 600;
+}
+form ul il {
+  margin: 15px 0;
+  font-style: 14px;
+}
+label.reg {
+  display: inline-block;
+  width: 110px;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: right;
+  color: powderblue;
+  margin-right: 10px;
+}
+fieldset label {
+  display: inline-block;
+  margin: 10px 0;
+}
+form #send {
+  width: 100%;
+  padding: 10px 20px;
+  transition: all 0.3s;
+  border-radius: 5px;
+}
+form #send:hover {
+  background: rgb(140, 173, 223);
+  color: aliceblue;
+  cursor: pointer;
+}

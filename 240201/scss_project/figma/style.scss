@@ -5,7 +5,11 @@ $logo-color: #222;
 $logo-spacing: 3px;
 
 body {
-  display: ;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
 }
 .figma {
   border: 1px solid #000;
@@ -26,6 +30,22 @@ body {
         width: calc($logo-widht / 2);
         height: calc($logo-widht / 2);
         &:nth-child(1) {
+          background: #f24e1e;
+          border-radius: 50% 0 0 50%;
+        }
+        &:nth-child(2) {
+          background: #f24e1e;
+          border-radius: 50% 0 0 50%;
+        }
+        &:nth-child(3) {
+          background: #f24e1e;
+          border-radius: 50% 0 0 50%;
+        }
+        &:nth-child(4) {
+          background: #f24e1e;
+          border-radius: 50% 0 0 50%;
+        }
+        &:nth-child(5) {
           background: #f24e1e;
           border-radius: 50% 0 0 50%;
         }

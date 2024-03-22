@@ -26,7 +26,7 @@ header .inner .util {
   right: 30px;
   overflow: hidden;
 }
-header .inner .util {
+header .inner .util li {
   float: left;
 }
 header .inner .util li a {
@@ -39,6 +39,7 @@ header .inner #gnb {
   position: absolute;
   bottom: 0;
   right: 0;
+  overflow: hidden;
 }
 header .inner #gnb li {
   float: left;
