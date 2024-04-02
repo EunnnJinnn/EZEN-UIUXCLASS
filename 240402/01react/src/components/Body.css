@@ -1,0 +1,5 @@
+/* js에서 외부 스타일css를 줄 때 */
+.body {
+  background-color: powderblue;
+  color: #fff;
+}
