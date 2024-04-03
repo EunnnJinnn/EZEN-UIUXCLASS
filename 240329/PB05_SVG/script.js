@@ -122,6 +122,8 @@ const sec1_reset = () => {
   });
 };
 
+// #sec2
+
 const sec2 = () => {
   const tl = anime.timeline({
     easing: "linear",
@@ -138,7 +140,7 @@ const sec2 = () => {
   });
 };
 
-// sec3
+// #sec3
 const sec3 = () => {
   const d0 =
     "M453 100C283.5 11.5 184 0.499989 0.5 0.5V772H1921V63C1753.5 144 1381.5 288 1146 288C825 288 726.67 242.89 453 100Z";
