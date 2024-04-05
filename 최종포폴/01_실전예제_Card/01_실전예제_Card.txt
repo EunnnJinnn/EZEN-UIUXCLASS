@@ -1,0 +1,14 @@
+.container
+	. card
+		.card-inner
+			.card-img
+				img
+		span.img-title
+	.main-title
+	.sub-title
+	.content
+	.footer
+		.footer-text
+		.footer-icon
+		
+		

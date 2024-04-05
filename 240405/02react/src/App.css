@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  width: 100%;
+  max-width: 500px;
+  margin: 100px auto;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  box-shadow: 0 0 55px #7bae7f;
+  border-radius: 40px;
+}
+.App h1 {
+  color: #73956f;
+  text-shadow: 0px 5px 10px #95d7ae;
+}
+.App h4 {
+  color: #7bae7f;
+}
+.App h3 {
+  color: #7bae7f;
+  padding: 10px;
+}
+/* .App button:hover {
+  background: #95d7ae;
+} */
