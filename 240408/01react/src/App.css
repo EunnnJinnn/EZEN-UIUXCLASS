@@ -1,0 +1,61 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.App {
+  border: 1px solid powderblue;
+  border-radius: 20px;
+  margin: 50px;
+}
+h1 {
+  margin-top: 40px;
+  text-align: center;
+  color: powderblue;
+}
+.container {
+  margin-top: 40px;
+  display: flex;
+  /* text-align: center;
+  align-items: center; */
+  justify-content: space-around;
+  /* border: 1px solid #f00; */
+}
+.game_card {
+  width: 300px;
+  height: 300px;
+  text-align: center;
+  border: 1px solid powderblue;
+  border-radius: 20px;
+}
+
+.buttons {
+  text-align: center;
+  margin: 50px;
+}
+button {
+  width: 100px;
+  height: 100px;
+  font-size: 50px;
+  margin-right: 20px;
+  background: powderblue;
+  border: none;
+  border-radius: 1cqmin;
+}
+button:hover {
+  width: 120px;
+  height: 120px;
+  font-size: 70px;
+}
+.win {
+  border: 1px solid aquamarine;
+  color: aquamarine;
+}
+.lose {
+  border: 1px solid pink;
+  color: pink;
+}
+.tie {
+  border: 10px solid #fdfd85;
+  color: #fdfd85;
+}
