@@ -1,2 +1,2 @@
-const Hbtn = document.querySelectorAll(".fa-heart");
-console.log(Hbtn);
+const Btn = document.querySelectorAll(".footer-icon");
+

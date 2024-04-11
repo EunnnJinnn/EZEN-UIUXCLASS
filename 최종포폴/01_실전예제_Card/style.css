@@ -17,7 +17,7 @@ a {
   justify-content: space-between;
   align-items: center;
   /* gap: 20px; */
-  width: 1920PX;
+  width: 1920px;
   height: 900px;
   padding: 200px;
 }
@@ -38,6 +38,9 @@ a {
 .card-img {
   width: 400px;
   overflow: hidden;
+}
+.card-img img:nth-child(3) {
+  object-fit: cover;
 }
 .card-img img {
   width: 100%;
@@ -92,4 +95,10 @@ a {
 .footer-icon {
   margin: 0;
   font-size: 25px;
+  background: none;
+  border: none;
+  cursor: pointer;
 }
+/* .footer-icon:focus {
+  color: #f00;
+} */
