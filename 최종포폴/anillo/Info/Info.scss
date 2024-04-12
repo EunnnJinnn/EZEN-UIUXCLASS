@@ -1,0 +1,96 @@
+@import "../common.scss";
+
+//==========PC==========//
+#container {
+  width: 100%;
+  display: grid;
+  font-family: "Noto Sans KR";
+  .review_content {
+    // grid-template-columns: repeat(1fr, 25px);
+    width: 341.59px;
+    height: 482.59px;
+    background: #fff;
+    position: relative;
+    border: 1px solid $Color-stroke;
+    .review_img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      .r_img {
+        width: 339.59px;
+        height: 339.59px;
+      }
+    }
+    .review_header {
+      position: absolute;
+      bottom: 78px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid $Color-stroke;
+      font-size: 12px;
+      width: 100%;
+      .star {
+        color: $backgroundcolor-blue;
+      }
+      .middle_text {
+        display: flex;
+        color: $Textcolor-gray;
+        justify-content: space-around;
+      }
+    }
+    .review_footer {
+      display: flex;
+      position: absolute;
+      top: 405px;
+      left: 0;
+      font-size: 12px;
+      width: 100%;
+      align-items: center;
+      .review_min_img {
+        display: flex;
+        justify-content: space-around;
+        .r_min_img {
+          width: 79px;
+        }
+      }
+      .footer_content {
+        width: 100%;
+        justify-content: space-around;
+        margin-left: 20px;
+        .footer_text {
+          display: flex;
+          margin-top: 10px;
+          .review_subtitle {
+            width: 114px;
+          }
+        }
+      }
+    }
+  }
+}
+
+//==========Tablet==========//
+@media screen and (max-width: 1200px) {
+  .wrap {
+    #container {
+      width: 100%;
+    }
+  }
+}
+
+//==========Mobile==========//
+@media screen and (max-width: 768px) {
+  .wrap {
+    #container {
+      width: 100%;
+    }
+    #gnb {
+      .gnb_container {
+        padding: 0 50px;
+        &:nth-child(2) {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+    }
+  }
+}
