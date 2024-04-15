@@ -3,64 +3,78 @@
 //==========PC==========//
 #container {
   width: 100%;
-  display: grid;
   font-family: "Noto Sans KR";
-  .review_content {
-    // grid-template-columns: repeat(1fr, 25px);
-    width: 341.59px;
-    height: 482.59px;
-    background: #fff;
-    position: relative;
-    border: 1px solid $Color-stroke;
-    .review_img {
-      position: absolute;
-      top: 0;
-      left: 0;
-      .r_img {
-        width: 339.59px;
-        height: 339.59px;
-      }
-    }
-    .review_header {
-      position: absolute;
-      bottom: 78px;
-      padding-bottom: 10px;
-      border-bottom: 1px solid $Color-stroke;
-      font-size: 12px;
-      width: 100%;
-      .star {
-        color: $backgroundcolor-blue;
-      }
-      .middle_text {
-        display: flex;
-        color: $Textcolor-gray;
-        justify-content: space-around;
-      }
-    }
-    .review_footer {
-      display: flex;
-      position: absolute;
-      top: 405px;
-      left: 0;
-      font-size: 12px;
-      width: 100%;
-      align-items: center;
-      .review_min_img {
-        display: flex;
-        justify-content: space-around;
-        .r_min_img {
-          width: 79px;
+  .review_header {
+    display: flex;
+    padding: 10px;
+    margin-top: 30px;
+    justify-content: space-around;
+    text-align: center;
+  }
+  .review_contents {
+    width: 95%;
+    display: grid;
+    grid-template-columns: repeat(4, 210px);
+    row-gap: 20px;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 60px;
+    .review_content {
+      width: 341.59px;
+      height: 482.59px;
+      background: #fff;
+      position: relative;
+      border: 1px solid $Color-stroke;
+      .review_img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        .r_img {
+          width: 339.59px;
+          height: 339.59px;
         }
       }
-      .footer_content {
+      .review_header {
+        position: absolute;
+        bottom: 78px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid $Color-stroke;
+        font-size: 12px;
         width: 100%;
-        justify-content: space-around;
-        margin-left: 20px;
-        .footer_text {
+        .star {
+          color: $backgroundcolor-blue;
+        }
+        .middle_text {
           display: flex;
-          margin-top: 10px;
-          .review_subtitle {
-            width: 114px;
+          color: $Textcolor-gray;
+          justify-content: space-around;
+        }
+      }
+      .review_footer {
+        display: flex;
+        position: absolute;
+        top: 405px;
+        left: 0;
+        font-size: 12px;
+        width: 100%;
+        align-items: center;
+        .review_min_img {
+          display: flex;
+          justify-content: space-around;
+          .r_min_img {
+            width: 79px;
+          }
+        }
+        .footer_content {
+          width: 100%;
+          justify-content: space-around;
+          margin-left: 20px;
+          .footer_text {
+            display: flex;
+            margin-top: 10px;
+            .review_subtitle {
+              width: 114px;
+            }
           }
         }
       }
