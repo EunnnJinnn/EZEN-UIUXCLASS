@@ -37,17 +37,18 @@
   .review_contents {
     width: auto;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(4, 20%);
     border: 1px solid #400;
     align-items: center;
     justify-content: space-around;
     margin-top: 60px;
     .review_content {
-      width: 300px;
+      width: 400px;
       height: 482.59px;
       background: #fff;
       position: relative;
       border: 1px solid $Color-stroke;
+      margin: 0 auto;
       .review_img {
         position: absolute;
         left: 0;
