@@ -2,14 +2,15 @@ const form = document.querySelector("form");
 const input = document.querySelector("input");
 const ul = document.querySelector("ul");
 
-const todos = []; //자료구조
+//자료구조
+let todos = [];
 
 const save = () => {
   localStorage.setItem("todos", JSON.stringify(todos));
 };
-
+// parentElement; 해당요소의 부모요소를 찾게함
 const delItem = (e) => {
-  const target = e.target.parentElement; //해당요소의 부모요소를 찾게함
+  const target = e.target.parentElement;
   todos = todos.filter((todo) => todo.id != target.id);
   save();
   target.remove();
@@ -22,10 +23,12 @@ const addItem = (todo) => {
     const span = document.createElement("span");
     const button = document.createElement("button");
 
-    span.innerText = todo.text; //span 생성
-    button.innerText = "삭제"; //버튼 생성
-    button.addEventListener("click", delItem); // 삭제 버튼에 삭제를 작동시켜주는 역할, 위에 delItem 함수 정의 해줘야함!!!
-
+    //span 생성
+    span.innerText = todo.text;
+    //버튼 생성
+    button.innerText = "삭제";
+    // 삭제 버튼에 삭제를 작동시켜주는 역할, 위에 delItem 함수 정의 해줘야함!!!
+    button.addEventListener("click", delItem);
     li.appendChild(span);
     li.appendChild(button);
     ul.appendChild(li);
@@ -47,19 +50,18 @@ const handler = (e) => {
 };
 
 const init = () => {
+  const userTodos = JSON.parse(localStorage.getItem("todos"));
+
   if (userTodos) {
     userTodos.forEach((todo) => {
       addItem(todo);
     });
-  } else {
-    handler();
+    todos = userTodos;
   }
-
-  todos = userTodos;
 };
 
 init();
-form, addEventListener("submit", handler);
+form.addEventListener("submit", handler);
 
 // localStorage.setItem("Hello", "World"); //저장하고 싶을때
 // const myData = localStorage.getItem("Hello");
