@@ -1,6 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Form, Navbar, Container, Nav, Button } from "react-bootstrap";
+import {
+  Form,
+  Navbar,
+  Container,
+  Nav,
+  NavDropdown,
+  Button,
+} from "react-bootstrap";
 import netflix from "../img/netflix.png";
 
 const Navigation = () => {

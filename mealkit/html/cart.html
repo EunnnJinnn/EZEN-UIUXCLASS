@@ -1,14 +1,16 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="../css/style.css" />
+    <!-- fontawesome -->
     <script
       src="https://kit.fontawesome.com/3f2ea24883.js"
       crossorigin="anonymous"
     ></script>
+    <!-- custom css & js-->
+    <link rel="stylesheet" href="../css/style.css" />
     <script defer src="../javascript/cart.js"></script>
   </head>
   <body>
@@ -26,8 +28,13 @@
             <h3>장바구니</h3>
             <div class="cart-items-check-all">
               <span>
-                <input type="checkbox" class="cart-chk-all" checked />
-                <label for="allSelect">전체선택<em>2</em>/2</label>
+                <input
+                  id="allSelect"
+                  type="checkbox"
+                  class="cart-chk-all"
+                  checked
+                />
+                <label for="allSelect">전체선택</label> <em>2</em>/2
               </span>
               <button class="btn-all-clear">전체삭제</button>
             </div>
@@ -36,10 +43,7 @@
             <div class="cart-item">
               <div class="cart-item-title">
                 <input type="checkbox" class="cart-chk" checked />
-                <span
-                  >징징이가 통으로 들어간!매콤한! 해물 파스타 <br />
-                  (1인분)</span
-                >
+                <span class="productName"></span>
                 <button class="btn-clear">
                   <i class="fas fa-xmark"></i>
                 </button>
@@ -49,13 +53,13 @@
                   <img src="../images/goods-thum-01.jpg" alt="thum01" />
                 </div>
                 <div class="cart-item-info">
-                  <span class="delivery-time">
-                    <i class="fas fa-clock"></i> 밤 12시 전 주문 시
-                  </span>
                   <span class="delivery-date">내일(수) 4/23 도착보장</span>
-                  <span class="total-price price01"></span>
+                  <span class="delivery-time">
+                    <i class="fas fa-clock"></i> 밤 12시 주문 시
+                  </span>
+                  <span class="total-price productPrice"></span>
                   <span class="benetfit">
-                    <em>무료배송</em> <em>포인트 적립</em>
+                    <em>무료배송</em><em>포인트적립</em>
                   </span>
                   <div class="custom-select">
                     <select name="count" id="count">
@@ -72,10 +76,7 @@
             <div class="cart-item">
               <div class="cart-item-title">
                 <input type="checkbox" class="cart-chk" checked />
-                <span
-                  >HACCP 인증을 받은 닭꼬치 밀키트,굽기만<br />하면
-                  끝(10개)</span
-                >
+                <span class="productName"></span>
                 <button class="btn-clear">
                   <i class="fas fa-xmark"></i>
                 </button>
@@ -85,14 +86,14 @@
                   <img src="../images/goods-thum-02.jpg" alt="thum02" />
                 </div>
                 <div class="cart-item-info">
-                  <span class="delivery-time">
-                    <i class="fas fa-clock"></i> 밤 12시 전 주문 시
-                  </span>
                   <span class="delivery-date">내일(수) 4/23 도착보장</span>
-                  <span class="total-price price02"></span>
+                  <span class="delivery-time">
+                    <i class="fas fa-clock"></i> 밤 12시 주문 시
+                  </span>
+                  <span class="total-price productPrice"></span>
                   <span class="benetfit">
-                    <em>무료배송</em> <em>포인트 적립</em></span
-                  >
+                    <em>무료배송</em><em>포인트적립</em>
+                  </span>
                   <div class="custom-select">
                     <select name="count" id="count">
                       <option value="1">1</option>
@@ -121,12 +122,12 @@
             </div>
             <div>
               <span>총 결제 예상금액</span>
-              <span class="priceTotal priceSume"></span>
+              <span class="priceTotal priceSum"></span>
             </div>
           </div>
           <button class="btn-primary btn-order">2개 상품 주문하기</button>
           <div class="cart-item-empty">
-            <img src="../images/cart-item-empty.png" alt="">
+            <img src="../images/cart-item-empty.png" alt="empty" />
           </div>
           <ul class="cart-notice">
             <li>장바구니에 담긴 상품은 90일간 보관됩니다.</li>
@@ -134,7 +135,7 @@
             <li>쿠폰 및 할인 적용에 따라 대체될 수 있습니다.</li>
           </ul>
         </div>
-        <!-- gnb.html -->
+        <!-- gnb.html-->
         <iframe
           class="gnb-iframe"
           src="../include/gnb.html"

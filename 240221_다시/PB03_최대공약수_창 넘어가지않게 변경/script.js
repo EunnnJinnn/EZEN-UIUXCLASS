@@ -28,6 +28,7 @@ const getGCD = (firstNum, secondNum) => {
 
 // 인풋 안에있는 벨류를
 button.onclick = function (e) {
-  e.perventDefault();
+  e.preventDefault();
   result.innerText = getGCD(firstNum.value, secondNum.value);
 };
+

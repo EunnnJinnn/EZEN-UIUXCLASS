@@ -99,6 +99,6 @@ a {
   border: none;
   cursor: pointer;
 }
-/* .footer-icon:focus {
-  color: #f00;
-} */
+.footer-icon:focus {
+  background: x;
+}

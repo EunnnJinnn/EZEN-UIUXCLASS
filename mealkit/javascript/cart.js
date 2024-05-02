@@ -14,11 +14,21 @@ allClear.addEventListener("click", () => {
 });
 
 const itemClear = document.querySelectorAll(".cart-content .btn-clear");
-
+let totalPaymentAmount = 0;
 let clickedCount = 0;
 
 itemClear.forEach((item) => {
   item.addEventListener("click", function () {
+    const productPriceText =
+      this.parentElement.parentElement.querySelector(".productPrice").innerText;
+    const productPrice = parseFloat(productPriceText.replace(/,/g, ""));
+    if (this.checked) {
+      totalPaymentAmount += productPrice;
+    } else {
+      totalPaymentAmount -= productPrice;
+    }
+    updateTotalPaymentDisplay();
+
     this.parentElement.parentElement.style.display = "none";
     clickedCount++;
 
@@ -32,26 +42,58 @@ itemClear.forEach((item) => {
   });
 });
 
-const cartCheckAll = document.querySelector("cart-chk-all");
+const cartCheckAll = document.querySelector(".cart-chk-all");
+const cartCheck = document.querySelectorAll(".cart-chk");
 
 cartCheckAll.addEventListener("click", () => {
-  const cartCheck = document.querySelectorAll(".cart-chk");
   cartCheck.forEach((checkbox) => {
     checkbox.checked = cartCheckAll.checked;
   });
+  totalPaymentAmount = 0;
+  cartCheck.forEach((checkbox, idx) => {
+    if (checkbox.checked) {
+      const productPriceText = productPrices[idx].innerText;
+      const productPrice = parseFloat(productPriceText.replace(/,/g, ""));
+      totalPaymentAmount += productPrice;
+    }
+  });
+  priceSum.forEach((item) => {
+    item.innerText = totalPaymentAmount.toLocaleString();
+  });
 });
 
-const a = 11760;
-const b = 18800;
-
-const price01 = document.querySelector(".price01");
-const price02 = document.querySelector(".price02");
+// Price Auto
+const productNames = document.querySelectorAll(".productName");
+const productPrices = document.querySelectorAll(".productPrice");
 const priceSum = document.querySelectorAll(".priceSum");
+console.log(productNames, productPrices, priceSum);
 
-price01.innerText = a.toLocaleString() + "원";
-price02.innerText = a.toLocaleString() + "원";
+fetch("../products.jdon")
+  .then((response) => response.json())
+  .then((jsonData) => {
+    jsonData.data.forEach((item, idx) => {
+      productNames[idx].innerText = item.name;
+      productPrices[idx].innerText = item.price.toLocaleString() + "원";
+      totalPaymentAmount += item.price;
+    });
+    update();
+  });
 
-const switchCommas = (a + b).toLocaleString();
-priceSum.forEach((item) => {
-  item.innerText = switchCommas = "원";
+cartCheck.forEach((checkbox) => {
+  checkbox.addEventListener("click", function () {
+    const productPriceText =
+      this.parentElement.parentElement.querySelector(".productPrice").inner;
+    const productPrice = parseInt(productPriceText.replace(/,/g, ""));
+    if (this.checked) {
+      totalPaymentAmount += productPrice;
+    } else {
+      totalPaymentAmount -= productPrice;
+    }
+  });
 });
+
+function update() {
+  priceSum.forEach((item) => {
+    item.innerText = totalPaymentAmount.toLocaleString();
+  });
+}
