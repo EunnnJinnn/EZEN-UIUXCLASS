@@ -112,6 +112,7 @@ body {
       display: flex;
       flex-direction: column;
       justify-content: center;
+      cursor: pointer;
       div {
         width: 28px;
         height: 1px;
@@ -148,6 +149,7 @@ body {
       }
     }
   }
+
   @media screen and (max-width: 768px) {
     #header_popup {
       height: 20px;
@@ -242,7 +244,169 @@ body {
 }
 
 #menu {
-  width: 100%;
+  .menu_container {
+    position: absolute;
+    top: 0;
+    left: -400px;
+  }
+  .menu_container.active {
+    left: 0;
+    transition: all 0.5s;
+  }
+  .menu_lf_cls {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 400px;
+    height: 100vh;
+    text-align: right;
+    align-items: center;
+    font-family: "Futura PT", sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    padding: 32px 38px;
+    background: #fcfcf2;
+    box-shadow: 2px 0 10px $Textcolor-gray;
+    cursor: pointer;
+    // border-bottom: 1px solid $Color-stroke;
+  }
+  .menu_wrapper {
+    position: fixed;
+    // left: -400px;
+    width: 400px;
+    height: 100vh;
+    background: #fcfcf2;
+    font-family: "Playfair Display", serif;
+    // box-shadow: 0px 0 3px $Textcolor-gray;
+    z-index: 99;
+    // border: 1px solid #f00;
+  }
+  .menu_wrapper {
+    margin-top: 90px;
+    border-top: 1px solid $Color-stroke;
+    .menu_hidden {
+      display: none;
+    }
+    .menu_item {
+      text-align: center;
+      justify-content: center;
+      // a:focus {
+      //   color: $backgroundcolor-blue;
+      // }
+      .menu_link {
+        display: flex;
+        // padding-top: 1rem;
+        // padding-bottom: 1rem;
+        padding: 20px;
+        border-bottom: 1px #eee solid;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        span {
+          font-size: 35px;
+        }
+        span:hover {
+          color: $backgroundcolor-blue;
+        }
+        .menu_icon {
+          position: absolute;
+          width: 30px;
+          transition: 0.2s all;
+        }
+      }
+      .menu_icon:before,
+      .menu_icon:after {
+        content: "";
+        display: block;
+        background-color: #83a2c1;
+        position: absolute;
+        top: 50%;
+        left: 150px;
+        transition: 0.35s;
+        width: 100%;
+        height: 2px;
+      }
+      .menu_icon:before {
+        transform: translateY(-50%);
+      }
+      .menu_icon:after {
+        transform: translateY(-50%) rotate(90deg);
+      }
+      .accordion-menu--active .menu_icon:before {
+        transform: translateY(-50%) rotate(-90deg);
+        opacity: 0;
+      }
+      .accordion-menu--active .menu_icon:after {
+        transform: translateY(-50%) rotate(0);
+      }
+      .menu_sublist {
+        font-family: "Futura PT", sans-serif;
+        font-size: 25px;
+        transition: all 0.8s ease-in;
+        li {
+          padding: 15px;
+          transition: all 0.8s ease-in;
+        }
+        .menu_item {
+          transition: all 0.8s ease-in;
+        }
+        .menu_sublink:hover {
+          color: #83a2c1;
+        }
+      }
+    }
+    .side_menu_slogan img {
+      position: absolute;
+      display: block;
+      width: 250px;
+      bottom: 150px;
+      left: 20%;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .menu_container {
+      position: absolute;
+      top: 0;
+      left: -100%;
+    }
+    .menu_container.active {
+      left: 100px;
+    }
+    .menu_lf_cls {
+      display: none;
+    }
+    .menu_wrapper {
+      width: 100vw;
+      top: 70px;
+      overflow: hidden;
+      background: #fcfcf2;
+      transition: all 0.3s ease-out;
+      margin-top: 40px;
+      .menu_item {
+        .menu_link {
+          span {
+            font-size: 50px;
+          }
+          .menu_icon {
+            left: 62%;
+          }
+          .menu_icon::before,
+          .menu_icon::after {
+            width: 150%;
+          }
+        }
+      }
+    }
+    .menu_sublink {
+      font-size: 35px;
+    }
+    .side_menu_slogan {
+      display: none;
+    }
+    .menu_list_clolor:hover {
+      color: $backgroundcolor-blue;
+    }
+  }
 }
 
 #asdie {

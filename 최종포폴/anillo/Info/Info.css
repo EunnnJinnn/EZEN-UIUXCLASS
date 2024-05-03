@@ -112,6 +112,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  cursor: pointer;
 }
 #header #header_contents .header_menu div {
   width: 28px;
@@ -239,8 +240,155 @@ body {
   }
 }
 
-#menu {
+#menu .menu_container {
+  position: absolute;
+  top: 0;
+  left: -400px;
+}
+#menu .menu_container.active {
+  left: 0;
+  transition: all 0.5s;
+}
+#menu .menu_lf_cls {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 400px;
+  height: 100vh;
+  text-align: right;
+  align-items: center;
+  font-family: "Futura PT", sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  padding: 32px 38px;
+  background: #fcfcf2;
+  box-shadow: 2px 0 10px #a0a0a0;
+  cursor: pointer;
+}
+#menu .menu_wrapper {
+  position: fixed;
+  top: 0;
+  width: 400px;
+  height: 100vh;
+  background: #fcfcf2;
+  font-family: "Playfair Display", serif;
+  z-index: 99;
+}
+#menu .menu_wrapper {
+  margin-top: 90px;
+  border-top: 1px solid #e0ded9;
+}
+#menu .menu_wrapper .menu_hidden {
+  display: none;
+}
+#menu .menu_wrapper .menu_item {
+  text-align: center;
+  justify-content: center;
+}
+#menu .menu_wrapper .menu_item .menu_link {
+  display: flex;
+  padding: 20px;
+  border-bottom: 1px #eee solid;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+#menu .menu_wrapper .menu_item .menu_link span {
+  font-size: 35px;
+}
+#menu .menu_wrapper .menu_item .menu_link span:hover {
+  color: #83a2c1;
+}
+#menu .menu_wrapper .menu_item .menu_link .menu_icon {
+  position: absolute;
+  width: 30px;
+  transition: 0.2s all;
+}
+#menu .menu_wrapper .menu_item .menu_icon:before,
+#menu .menu_wrapper .menu_item .menu_icon:after {
+  content: "";
+  display: block;
+  background-color: #83a2c1;
+  position: absolute;
+  top: 50%;
+  left: 150px;
+  transition: 0.35s;
   width: 100%;
+  height: 2px;
+}
+#menu .menu_wrapper .menu_item .menu_icon:before {
+  transform: translateY(-50%);
+}
+#menu .menu_wrapper .menu_item .menu_icon:after {
+  transform: translateY(-50%) rotate(90deg);
+}
+#menu .menu_wrapper .menu_item .accordion-menu--active .menu_icon:before {
+  transform: translateY(-50%) rotate(-90deg);
+  opacity: 0;
+}
+#menu .menu_wrapper .menu_item .accordion-menu--active .menu_icon:after {
+  transform: translateY(-50%) rotate(0);
+}
+#menu .menu_wrapper .menu_item .menu_sublist {
+  font-family: "Futura PT", sans-serif;
+  font-size: 25px;
+  transition: all 0.8s ease-in;
+}
+#menu .menu_wrapper .menu_item .menu_sublist li {
+  padding: 15px;
+  transition: all 0.8s ease-in;
+}
+#menu .menu_wrapper .menu_item .menu_sublist .menu_item {
+  transition: all 0.8s ease-in;
+}
+#menu .menu_wrapper .menu_item .menu_sublist .menu_sublink:hover {
+  color: #83a2c1;
+}
+#menu .menu_wrapper .side_menu_slogan img {
+  position: absolute;
+  display: block;
+  width: 250px;
+  bottom: 150px;
+  left: 20%;
+}
+@media screen and (max-width: 768px) {
+  #menu .menu_container {
+    position: absolute;
+    left: 100%;
+    border: 3px soild #555;
+  }
+  #menu .menu_container.active {
+    position: absolute;
+    left: -10%;
+  }
+  #menu .menu_lf_cls {
+    display: none;
+  }
+  #menu .menu_wrapper {
+    overflow: hidden;
+    background: #fcfcf2;
+    transition: all 0.3s ease-out;
+    margin-top: 40px;
+  }
+  #menu .menu_wrapper .menu_item .menu_link span {
+    font-size: 50px;
+  }
+  #menu .menu_wrapper .menu_item .menu_link .menu_icon {
+    left: 62%;
+  }
+  #menu .menu_wrapper .menu_item .menu_link .menu_icon::before,
+  #menu .menu_wrapper .menu_item .menu_link .menu_icon::after {
+    width: 150%;
+  }
+  #menu .menu_sublink {
+    font-size: 35px;
+  }
+  #menu .side_menu_slogan {
+    display: none;
+  }
+  #menu .menu_list_clolor:hover {
+    color: #83a2c1;
+  }
 }
 
 #asdie {
@@ -286,19 +434,18 @@ body {
 #container .review_contents {
   width: auto;
   display: grid;
-  grid-template-columns: repeat(4, 20%);
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   border: 1px solid #400;
   align-items: center;
   justify-content: space-around;
   margin-top: 60px;
 }
 #container .review_contents .review_content {
-  width: 400px;
+  width: 300px;
   height: 482.59px;
   background: #fff;
   position: relative;
   border: 1px solid #e0ded9;
-  margin: 0 auto;
 }
 #container .review_contents .review_content .review_img {
   position: absolute;

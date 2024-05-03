@@ -4,10 +4,128 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <script defer src="./common.js"></script>
+    <link rel="stylesheet" href="./common.css" />
   </head>
   <body>
-    <div id="header"></div>
-    <div id="menu"></div>
+    <div id="header">
+      <div id="header_popup">
+        <img src="../Index/0.image/close button.png" alt="close" />
+        <span>아닐로X아메스 샤워타임 리미티드 세트 25% 할인</span>
+        <img src="../Index/0.image/inceto widget close icon.png" alt="close" />
+      </div>
+      <div id="header_contents">
+        <button class="header_menu">
+          <div></div>
+          <div></div>
+          <div></div>
+        </button>
+        <a href="./index.html" class="header_logo">
+          <img src="../Index/0.image/logo.png" alt="logo" />
+        </a>
+        <div class="header_right">
+          <button class="header_search">
+            <img src="../Index/0.image/ico-search-m01.png" alt="search" />
+          </button>
+          <a href="../Mypage/0.Login/Login.html" class="header_mypage">
+            <img src="../Index/0.image/mo_ico-mypg-m01.png" alt="mypage" />
+          </a>
+          <a href="../Cart/Cart.html" class="header_cart">
+            <img src="../Index/0.image/mo_cart.png" alt="" />
+          </a>
+          <button class="header_menu header_menu_mobile">
+            <div></div>
+            <div></div>
+            <div></div>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div id="menu">
+      <div class="menu_container">
+        <!-- close btn -->
+        <span class="menu_lf_cls">CLOSE</span>
+        <!-- menu -->
+        <div class="menu_wrapper active" id="menu-parent-1" data-menu_wrapper>
+          <nav role="navigation" class="accordion-menu">
+            <ul class="menus_list">
+              <li class="menu_item">
+                <a href="./Story/Story.html" class="menu_link"
+                  ><span>Story</span></a
+                >
+              </li>
+              <li class="menu_item clolor_cg">
+                <a href="#menu-1" class="menu_link" data-accordion-menu>
+                  <span class="menu_list_clolor"> Shop </span>
+                  <!-- submenue_icon -->
+                  <span class="menu_icon"></span>
+                </a>
+                <!-- submenu_1 -->
+                <ul class="menu_sublist menu_hidden" id="menu-1">
+                  <li>
+                    <a href="./Shop/Shop.html" class="menu_sublink">
+                      with AMES
+                    </a>
+                  </li>
+                  <li>
+                    <a href="./Shop/Shop.html" class="menu_sublink"> ALL </a>
+                  </li>
+                  <li>
+                    <a href="./Shop/Shop.html" class="menu_sublink"> HAIR </a>
+                  </li>
+                  <li>
+                    <a href="./Shop/Shop.html" class="menu_sublink"> BODY </a>
+                  </li>
+                  <li>
+                    <a href="./Shop/Shop.html" class="menu_sublink"> GIFT </a>
+                  </li>
+                  <li>
+                    <a href="./Shop/Shop.html" class="menu_sublink"> OBJECT </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="menu_item">
+                <a href="./Stocklist/Stocklist.html" class="menu_link">
+                  <span>Stockist</span>
+                </a>
+              </li>
+              <li class="menu_item">
+                <a href="./Event/Event.html" class="menu_link"
+                  ><span>Event</span></a
+                >
+              </li>
+              <li class="menu_item">
+                <a href="#menu-2" class="menu_link" data-accordion-menu>
+                  <span> Info </span>
+                  <span class="menu_icon"></span>
+                </a>
+                <!-- submenu_2 -->
+                <ul class="menu_sublist menu_hidden" id="menu-2">
+                  <li>
+                    <a href="../Info/Info.html" class="menu_sublink">
+                      REVIEW
+                    </a>
+                  </li>
+                  <li>
+                    <a href="./Info/Info.html" class="menu_sublink"> NOTICE </a>
+                  </li>
+                  <li>
+                    <a href="#" class="menu_sublink"> Q&A </a>
+                  </li>
+                  <li>
+                    <a href="#" class="menu_sublink"> FAQ </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <!-- menu_slogan -->
+            <div class="side_menu_slogan">
+              <img src="./img/menu_slogan.png" alt="slogan" />
+            </div>
+          </nav>
+        </div>
+      </div>
+    </div>
     <div id="aside"></div>
     <div id="footer"></div>
   </body>
