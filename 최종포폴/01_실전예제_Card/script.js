@@ -1,13 +1,14 @@
-const pushLike = document.querySelector(".footer .footer-icon");
+const UnLikeBtn = document.querySelector(".icon_btn1");
+const LikeBtn = document.querySelector(".icon_btn2");
 
-pushLike.addEventListener("click", (e) => {
-  console.log("click");
-  e.preventDefault();
-  if (pushLike.style.backgroundPosition.slice(0, 4) === "-156") {
-    pushLike.style.backgroundPosition = `-130px -478px`;
-    likeNum.textContent = Number(likeNum.textContent) + 1;
-  } else {
-    pushLike.style.backgroundPosition = `-156px -478px`;
-    likeNum.textContent = Number(likeNum.textContent) - 1;
-  }
+console.log(LikeBtn, UnLikeBtn);
+
+UnLikeBtn.addEventListener("click", () => {
+  LikeBtn.style.display = "block";
+  UnLikeBtn.style.display = "none";
+});
+
+LikeBtn.addEventListener("click", () => {
+  UnLikeBtn.style.display = "block";
+  LikeBtn.style.display = "none";
 });
