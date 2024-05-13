@@ -367,10 +367,7 @@ body {
     .menu_container {
       position: absolute;
       top: 0;
-      left: -100%;
-    }
-    .menu_container.active {
-      left: 100px;
+      left: 0;
     }
     .menu_lf_cls {
       display: none;

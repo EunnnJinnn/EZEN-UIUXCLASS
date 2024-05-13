@@ -267,7 +267,6 @@ body {
 }
 #menu .menu_wrapper {
   position: fixed;
-  top: 0;
   width: 400px;
   height: 100vh;
   background: #fcfcf2;
@@ -354,17 +353,15 @@ body {
 @media screen and (max-width: 768px) {
   #menu .menu_container {
     position: absolute;
-    left: 100%;
-    border: 3px soild #555;
-  }
-  #menu .menu_container.active {
-    position: absolute;
-    left: -10%;
+    top: 20%;
+    left: 0px;
   }
   #menu .menu_lf_cls {
     display: none;
   }
   #menu .menu_wrapper {
+    width: 100vw;
+    top: 70px;
     overflow: hidden;
     background: #fcfcf2;
     transition: all 0.3s ease-out;
