@@ -1,0 +1,59 @@
+/* common */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+}
+
+/* bgimg */
+.main_img img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+
+/* contents */
+.contents {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 850px;
+  height: 50%;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+}
+
+/* btn */
+.btns {
+  display: flex;
+  padding: 20px;
+}
+.btns button {
+  width: 100%;
+  height: 50px;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+/* content */
+.content {
+  text-align: center;
+  color: #fff;
+  font-size: 30px;
+  padding-top: 20px;
+  /* display: none; */
+}
