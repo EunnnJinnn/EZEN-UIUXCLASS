@@ -1,0 +1,54 @@
+//==========var==========//
+:root {
+  --Textcolor-black: #1e1e1e;
+  --Textcolor-gray: #a0a0a0;
+  --Textcolor-white: #fffefa;
+  --backgroundcolor-blue: #83a2c1;
+  --backgroundcolor-lightgreen: #f7f7ef;
+  --backgroundcolor-light: #fafaf6;
+  --Color-stroke: #e0ded9;
+  --Color-lightgray: #f6f6f6;
+  --Color-orange: #fc6408;
+}
+
+//==========font==========//
+@import url("https://fonts.cdnfonts.com/css/futura-pt");
+//font-family: 'Futura PT', sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+//font-family: "Playfair Display", serif;
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
+//font-family: "Noto Sans KR", sans-serif;
+
+h1 {
+  font: normal 36px/1 "Playfair Display";
+  @media screen and (max-width: 768px) {
+    font-size: 56px;
+  }
+}
+h2 {
+  font: normal 28px/1 "Futura PT";
+  @media screen and (max-width: 768px) {
+    font-size: 48px;
+  }
+}
+h3 {
+  font: normal 18px/1 "Futura PT";
+  @media screen and (max-width: 768px) {
+    font-size: 40px;
+    line-height: 2.5rem;
+  }
+}
+h4 {
+  font: normal 14px/1 "Noto Sans KR";
+  @media screen and (max-width: 768px) {
+    font-size: 33px;
+    line-height: 2.5rem;
+  }
+}
+h5 {
+  font: normal 11px/1 "Noto Sans KR";
+  @media screen and (max-width: 768px) {
+    font-size: 30px;
+    line-height: 2.5rem;
+  }
+}

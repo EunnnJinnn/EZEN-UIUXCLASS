@@ -1,0 +1,484 @@
+@import url("../include/css/include.css");
+.index {
+  overflow: hidden;
+  width: 100%;
+}
+.index .index-section01 {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+.index .index-section01 .index-section01-image {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.index .index-section01 .index-section01-image img {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.index .index-section01 .index-section01-image img .animated {
+  transition: 0.5s ease-out;
+}
+.index .index-section01 .arrows {
+  position: absolute;
+  width: 97%;
+  left: 1%;
+  margin: 0 auto;
+  height: 100vh;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 44px;
+  color: var(--Textcolor-gray);
+}
+.index .index-section01 .arrows #section1prev {
+  transition: all 0.3s;
+}
+.index .index-section01 .arrows #section1prev:hover {
+  cursor: pointer;
+  color: #1e1e1e;
+}
+.index .index-section01 .arrows #section1next {
+  transition: all 0.3s;
+}
+.index .index-section01 .arrows #section1next:hover {
+  cursor: pointer;
+  color: var(--Textcolor-black);
+}
+.index .index-section02 {
+  width: 100vw;
+  height: 900px;
+  display: flex;
+}
+.index .index-section02 .index-section02-text {
+  width: 50vw;
+  height: 100%;
+  position: relative;
+  text-align: center;
+}
+.index .index-section02 .index-section02-text .index-section02-text-title {
+  font-family: "Playfair Display";
+  font-size: 36px;
+  margin: 160px 0;
+}
+.index .index-section02 .index-section02-text .index-section02-product-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50vw;
+  height: 200px;
+  margin-top: 370px;
+  margin-bottom: 180px;
+}
+.index .index-section02 .index-section02-text .index-section02-product-info p {
+  color: #1e1e1e;
+}
+.index .index-section02 .index-section02-text .index-section02-product-info p:nth-child(1) {
+  font-size: 18px;
+}
+.index .index-section02 .index-section02-text .index-section02-product-info p:nth-child(2) {
+  font-size: 14px;
+  color: var(--Textcolor-gray);
+  margin: 20px 0 40px 0;
+}
+.index .index-section02 .index-section02-text .index-section02-product-info p:nth-child(3) {
+  font-size: 14px;
+}
+.index .index-section02 .index-section02-text .index-section02-product-info button {
+  margin-top: 30px;
+  border: none;
+  font-size: 11px;
+  height: 46px;
+  width: 185px;
+  border: 1px solid var(--Textcolor-black);
+  color: var(--Textcolor-black);
+  background: none;
+  margin-bottom: 300px;
+  padding: 15px 0;
+  cursor: pointer;
+}
+.index .index-section02 .index-section02-text .index-section02-arrows {
+  width: 50vw;
+  position: absolute;
+  top: 50%;
+  font-size: 44px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 5%;
+}
+.index .index-section02 .index-section02-text .index-section02-arrows i:nth-child(1) {
+  color: var(--Textcolor-gray);
+  opacity: 0.1;
+  transition: all 0.8s;
+}
+.index .index-section02 .index-section02-text .index-section02-arrows i:nth-child(1):hover {
+  cursor: pointer;
+  color: var(--Textcolor-gray);
+  opacity: 0.3;
+}
+.index .index-section02 .index-section02-text .index-section02-arrows i:nth-child(2) {
+  color: var(--Textcolor-gray);
+  opacity: 0.5;
+}
+.index .index-section02 .index-section02-text .index-section02-arrows i:nth-child(2):hover {
+  cursor: pointer;
+  transition: all 0.8s;
+  color: var(--Textcolor-gray);
+  opacity: 0.9;
+}
+.index .index-section02 .index-section02-image {
+  width: 50vw;
+  height: 900px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--backgroundcolor-lightgreen);
+}
+.index .index-section02 .index-section02-image div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.index .index-section02 .index-section02-image div img {
+  width: 650px;
+  height: 650px;
+}
+.index .index-section03 {
+  color: #fff;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: repeat(3, 33.33%);
+}
+.index .index-section03 .index-section03-part {
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.index .index-section03 .index-section03-part div {
+  width: 100%;
+  height: 100%;
+}
+.index .index-section03 .index-section03-part div img {
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.index .index-section03 .index-section03-part div:hover img {
+  transform: scale(1.04);
+}
+.index .index-section03 .index-section03-part .index-section03-inner {
+  position: absolute;
+  top: 10%;
+  width: 80%;
+  height: 78%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+.index .index-section03 .index-section03-part .index-section03-inner .index-section03-text p:nth-child(1) {
+  font-family: "Playfair Display";
+  font-size: 36px;
+}
+.index .index-section03 .index-section03-part .index-section03-inner .index-section03-text p:nth-child(2) {
+  font-size: 14px;
+  font-weight: 500;
+}
+.index .index-section03 .index-section03-part .index-section03-inner button {
+  font-style: "Futura PT";
+  font-weight: 500;
+  font-size: 11px;
+  border: 1px solid #fff;
+  color: #fff;
+  background: transparent;
+  width: 186px;
+  height: 46px;
+  padding: 15px 0;
+  cursor: pointer;
+}
+.index .index-section04 {
+  width: 75%;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 210px;
+}
+.index .index-section04 > p {
+  font-weight: normal;
+  font-family: "Playfair Display";
+  font-size: 36px;
+  line-height: 1;
+  margin: 150px 0 35px 0;
+}
+.index .index-section04 .product_list {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-snap-type: x;
+  display: grid;
+  grid-template-columns: repeat(4, 25%);
+}
+.index .index-section04 .product {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-right: 30px;
+  scroll-snap-align: start;
+}
+.index .index-section04 .product .productImgs {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.index .index-section04 .product .productImgs img {
+  width: 100%;
+}
+.index .index-section04 .product .product-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: all 0.3s;
+}
+.index .index-section04 .product .product-hover:hover {
+  opacity: 1;
+}
+.index .index-section04 .product .product-info .p {
+  font-family: "Playfair Display";
+  font-size: 18px;
+  color: var(--Textcolor-black);
+}
+.index .index-section04 .product .product-info .product_name {
+  font-family: "Futura PT";
+  margin-top: 10px;
+  font-size: 14px;
+  color: var(--Textcolor-gray);
+  line-height: 1;
+}
+.index .index-section04 .product .product_price {
+  font-size: 14px;
+  font-weight: 300;
+  color: var(--Textcolor-black);
+  line-height: 1;
+  margin: 27px 0 30px 0;
+}
+.index .index-section04 .product .button_pc_nobg {
+  text-align: center;
+  width: 185px;
+  font-weight: bold;
+  background: none;
+  font-size: 12px;
+  cursor: pointer;
+  color: var(--Textcolor-black);
+  border: 1px solid var(--Textcolor-black);
+  padding: 15px 0;
+}
+.index .index-section05 {
+  width: 100vw;
+  height: 715px;
+  position: relative;
+  overflow: hidden;
+}
+.index .index-section05 .section05-bg {
+  position: absolute;
+  background: url("./0.image/index-section5-image.jpg") center/cover no-repeat;
+  z-index: 1;
+  width: 100%;
+  height: 715px;
+  background-attachment: fixed;
+  overflow: hidden;
+}
+.index .index-section05 div img {
+  position: absolute;
+  top: calc(50% - 74px);
+  left: calc(50% - 203px);
+  width: 406px;
+  height: 148px;
+  z-index: 2;
+}
+
+@media screen and (max-width: 1200px) {
+  .index .index-section01 .arrows {
+    opacity: 0.3;
+  }
+  .index .index-section02 .index-section02-text .index-section02-product-info {
+    margin-top: 0px;
+    position: relative;
+  }
+  .index .index-section02 .index-section02-text .index-section02-product-info button {
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 20px;
+    position: absolute;
+  }
+  .index .index-section02 .index-section02-image {
+    background: var(----backgroundcolor-lightgreen);
+  }
+  .index .index-section02 .index-section02-image div img {
+    width: 450px;
+    height: 450px;
+  }
+  .index .index-section03 .index-section03-part {
+    transition: all 3s ease;
+  }
+  .index .index-section03 .index-section03-part div:hover img {
+    transform: scale(1.02);
+  }
+  .index .index-section04 .product_list {
+    display: flex;
+  }
+  .index .index-section04 .product {
+    margin-right: 60px;
+  }
+  .index .index-section04 .product .button_pc_nobg {
+    height: 45px;
+    font: 14px;
+    border: 1px solid var(--Textcolor-black);
+    padding: 15px 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .index .index-section02 {
+    background: #fff;
+    height: 850px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+  }
+  .index .index-section02 .index-section02-text {
+    width: 100vw;
+    height: 900px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .index .index-section02 .index-section02-text .index-section02-text-title {
+    margin: 140px 0;
+  }
+  .index .index-section02 .index-section02-text .index-section02-product-info {
+    width: 100vw;
+    height: 200px;
+    margin-top: 450px;
+    margin-bottom: 1px;
+    position: absolute;
+    top: 12%;
+  }
+  .index .index-section02 .index-section02-text .index-section02-product-info p:nth-child(1) {
+    font-size: 15px;
+  }
+  .index .index-section02 .index-section02-text .index-section02-product-info p:nth-child(2) {
+    font-size: 11px;
+    margin: 10px 0 20px 0;
+  }
+  .index .index-section02 .index-section02-text .index-section02-product-info p:nth-child(3) {
+    font-size: 11px;
+  }
+  .index .index-section02 .index-section02-text .index-section02-product-info button {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 10px;
+    font-size: 10px;
+  }
+  .index .index-section02 .index-section02-text .index-section02-arrows {
+    width: 100vw;
+  }
+  .index .index-section02 .index-section02-image {
+    position: absolute;
+    top: 25%;
+    left: 22%;
+    width: 59%;
+    height: 400px;
+    background: transparent;
+  }
+  .index .index-section02 .index-section02-image div img {
+    width: 300px;
+    height: 300px;
+  }
+  .index .index-section03 {
+    display: flex;
+    flex-direction: column;
+  }
+  .index .index-section03 .index-section03-part {
+    transition: all 3s ease;
+    width: 100%;
+  }
+  .index .index-section03 .index-section03-part:nth-child(1) {
+    height: 240px;
+  }
+  .index .index-section03 .index-section03-part:nth-child(2) {
+    height: 460px;
+  }
+  .index .index-section03 .index-section03-part:nth-child(3) {
+    height: 240px;
+  }
+  .index .index-section03 .index-section03-part .index-section03-part-image {
+    width: 100%;
+    overflow: hidden;
+  }
+  .index .index-section03 .index-section03-part .index-section03-part-image img {
+    width: 100%;
+    height: 100%;
+  }
+  .index .index-section03 .index-section03-part .index-section03-part-image img:nth-child(1) {
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: 0 70%;
+       object-position: 0 70%;
+  }
+  .index .index-section03 .index-section03-part .index-section03-part-image:hover img {
+    transform: scale(1.02);
+  }
+  .index .index-section03 .index-section03-part .index-section03-inner .index-section03-text {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .index .index-section03 .index-section03-part .index-section03-inner .index-section03-text p:nth-child(1) {
+    font-size: 24px;
+  }
+  .index .index-section03 .index-section03-part .index-section03-inner .index-section03-text p:nth-child(2) {
+    font-size: 12px;
+  }
+  .index .index-section03 .index-section03-part .index-section03-inner button {
+    display: none;
+  }
+  .index .index-section04 {
+    margin-bottom: 150px;
+  }
+  .index .index-section04 .product_list {
+    display: flex;
+  }
+  .index .index-section04 .product .product-info .product_name {
+    margin: 10px 0;
+  }
+  .index .index-section04 .product .button_pc_nobg {
+    height: 45px;
+    font-size: 14px;
+  }
+}/*# sourceMappingURL=style.css.map */

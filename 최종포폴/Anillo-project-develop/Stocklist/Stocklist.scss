@@ -1,0 +1,152 @@
+@import "../common.scss";
+
+//==========PC==========//
+.wrap {
+  width: 100%;
+  margin: 0 auto;
+  /* border: 1px solid red; */
+  #stocklist_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 65px;
+    margin: 90px auto 100px;
+    width: 75%;
+    position: relative;
+    #stocklist_online,
+    #stocklist_offline {
+      #stocklist {
+        /* border: 1px solid #f00; */
+        width: auto;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        .stockcont {
+          width: 100%;
+          text-align: center;
+          margin-bottom: 65px;
+          img {
+            width: 100%;
+          }
+          h3 {
+            margin: 20px auto 9px;
+            font: 500 18px/1.8 "Futura PT";
+          }
+          p {
+            font: normal 14px/1 "Futura PT";
+            color: #a0a0a0;
+          }
+        }
+        .stockcont:nth-child(3) {
+          h3 {
+            font: 500 18px/1.8 "Noto Sans KR";
+          }
+        }
+      }
+    }
+    #stocklist_offline {
+      display: none;
+      .stockcont {
+        p {
+          margin-bottom: 9px;
+        }
+        span {
+          display: flex;
+          flex-direction: column;
+          gap: 9px;
+          font: normal 14px/1.4 "Futura PT";
+          text-decoration: underline;
+          cursor: pointer;
+          margin-bottom: 9px;
+          transition: all 0.5s;
+        }
+        .stockcont_ananti_inner,
+        .stockcont_chicor_inner {
+          margin: 15px;
+          height: 0;
+          overflow: hidden;
+          visibility: hidden;
+          opacity: 0;
+          transform: translateY(-20px);
+          transition: all 0.5s;
+          .stockcont_inner {
+            margin-top: 15px;
+            &:nth-child(1) {
+              margin-top: 0px;
+            }
+            h4 {
+              font: 14px/1.4 "Noto Sans KR";
+            }
+            p {
+              font: 11px/1.1 "Noto Sans KR";
+              color: #a0a0a0;
+            }
+          }
+        }
+        .view {
+          height: auto;
+          visibility: visible;
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    }
+    .tab {
+      display: block;
+    }
+  }
+}
+
+//==========Tablet==========//
+@media screen and (max-width: 1200px) {
+  .wrap {
+    #stocklist_container {
+      width: 100%;
+    }
+  }
+}
+
+//==========Mobile==========//
+@media screen and (max-width: 768px) {
+  .wrap {
+    min-width: 390px;
+    #stocklist_container {
+      gap: 0px;
+      #stocklist_online,
+      #stocklist_offline {
+        #stocklist {
+          width: auto;
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          .stockcont {
+            width: 100%;
+            text-align: center;
+            padding-bottom: 50px;
+            img {
+              width: 100%;
+            }
+            h3 {
+              margin: 20px auto 9px;
+              font: 500 18px/1.8 "Futura PT";
+            }
+            p {
+              font: normal 14px/1.4 "Futura PT";
+              color: #a0a0a0;
+            }
+          }
+          .stockcont:nth-child(3) {
+            h3 {
+              font: 500 18px/1.8 "Noto Sans KR";
+            }
+          }
+        }
+      }
+      #stocklist_offline {
+        display: none;
+      }
+      .tab {
+        display: block;
+      }
+    }
+  }
+}

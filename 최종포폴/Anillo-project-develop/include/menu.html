@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--fontawesome-->
+    <script
+      src="https://kit.fontawesome.com/8f94d43ddd.js"
+      crossorigin="anonymous"
+    ></script>
+    <!--commom css&js-->
+    <link rel="stylesheet" href="./css/include.css" />
+    <script defer src=".script.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="menu">
+      <!-- close btn -->
+      <span class="menu_lf_cls">CLOSE</span>
+      <!-- menu -->
+      <div class="menu_wrapper active" id="menu-parent-1" data-menu_wrapper>
+        <nav role="navigation" class="accordion-menu">
+          <ul class="menus_list">
+            <li class="menu_item">
+              <a href="./Story/Story.html" class="menu_link"
+                ><span>Story</span></a
+              >
+            </li>
+            <li class="menu_item clolor_cg">
+              <a href="#menu-1" class="menu_link" data-accordion-menu>
+                <span class="menu_list_clolor"> Shop </span>
+                <!-- submenue_icon -->
+                <span class="menu_icon"></span>
+              </a>
+              <!-- submenu_1 -->
+              <ul class="menu_sublist menu_hidden" id="menu-1">
+                <li>
+                  <a href="./Shop/Shop.html" class="menu_sublink">
+                    with AMES
+                  </a>
+                </li>
+                <li>
+                  <a href="./Shop/Shop.html" class="menu_sublink"> ALL </a>
+                </li>
+                <li>
+                  <a href="./Shop/Shop.html" class="menu_sublink"> HAIR </a>
+                </li>
+                <li>
+                  <a href="./Shop/Shop.html" class="menu_sublink"> BODY </a>
+                </li>
+                <li>
+                  <a href="./Shop/Shop.html" class="menu_sublink"> GIFT </a>
+                </li>
+                <li>
+                  <a href="./Shop/Shop.html" class="menu_sublink"> OBJECT </a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu_item">
+              <a href="./Stocklist/Stocklist.html" class="menu_link">
+                <span>Stockist</span>
+              </a>
+            </li>
+            <li class="menu_item">
+              <a href="./Event/Event.html" class="menu_link"
+                ><span>Event</span></a
+              >
+            </li>
+            <li class="menu_item">
+              <a href="#menu-2" class="menu_link" data-accordion-menu>
+                <span> Info </span>
+                <span class="menu_icon"></span>
+              </a>
+              <!-- submenu_2 -->
+              <ul class="menu_sublist menu_hidden" id="menu-2">
+                <li>
+                  <a href="../Info/Info.html" class="menu_sublink"> REVIEW </a>
+                </li>
+                <li>
+                  <a href="./Info/Info.html" class="menu_sublink"> NOTICE </a>
+                </li>
+                <li>
+                  <a href="#" class="menu_sublink"> Q&A </a>
+                </li>
+                <li>
+                  <a href="#" class="menu_sublink"> FAQ </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <!-- menu_slogan -->
+          <!-- <div class="side_menu_slogan">
+            <img src="./img/menu_slogan.png" alt="slogan" />
+          </div> -->
+        </nav>
+      </div>
+    </div>
+  </body>
+</html>

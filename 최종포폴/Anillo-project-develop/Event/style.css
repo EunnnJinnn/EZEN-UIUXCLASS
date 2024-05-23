@@ -1,0 +1,145 @@
+#pager button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+#pager button {
+  cursor: pointer;
+}
+
+#content {
+  margin-top: 20px;
+}
+
+#page-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.wrap {
+  width: 100%;
+  margin: 0 auto;
+  /* border: 1px solid red; */
+}
+.wrap #gnb .goingbtn,
+.wrap #gnb .endbtn {
+  font: normal 20px/1 "Noto Sans KR";
+}
+.wrap #event_container {
+  margin: 90px auto 100px;
+  width: 75%;
+  /* border: 1px solid red; */
+  position: relative;
+}
+.wrap #event_container #event_going #event,
+.wrap #event_container #event_end #event {
+  width: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.wrap #event_container #event_going #event .eventcont,
+.wrap #event_container #event_end #event .eventcont {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 65px;
+}
+.wrap #event_container #event_going #event .eventcont img,
+.wrap #event_container #event_end #event .eventcont img {
+  width: 100%;
+}
+.wrap #event_container #event_going #event .eventcont h3,
+.wrap #event_container #event_end #event .eventcont h3 {
+  margin: 20px auto 0px;
+  font: 500 18px/1.8 "Futura PT";
+}
+.wrap #event_container #event_going #event .eventcont p,
+.wrap #event_container #event_end #event .eventcont p {
+  margin: 0px auto 15px;
+  font: normal 14px/1.4 "Noto Sans KR";
+  color: #a0a0a0;
+}
+.wrap #event_container #event_going #event .eventcont span,
+.wrap #event_container #event_end #event .eventcont span {
+  font: 400 14px/1.4 "Futura PT";
+}
+.wrap #event_container #event_going .event_pagenumber,
+.wrap #event_container #event_end .event_pagenumber {
+  width: 100%;
+  text-align: center;
+  margin-top: 50px;
+}
+.wrap #event_container #event_going .event_pagenumber a img,
+.wrap #event_container #event_end .event_pagenumber a img {
+  width: 8px;
+  margin: 0 15px;
+}
+.wrap #event_container #event_going .event_pagenumber .page-button,
+.wrap #event_container #event_end .event_pagenumber .page-button {
+  margin: 0 5px;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  font: normal 18px/1 "Futura PT";
+}
+.wrap #event_container #event_going .event_pagenumber .active,
+.wrap #event_container #event_end .event_pagenumber .active {
+  font-weight: 500;
+}
+.wrap #event_container #event_end {
+  display: none;
+}
+.wrap #event_container #event_end #page-content {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.wrap #event_container #event_end #page-content .content-page {
+  width: 100%;
+}
+
+/* ==========Tablet========== */
+@media screen and (max-width: 1200px) {
+  .wrap #event_container {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .wrap {
+    min-width: 390px;
+  }
+  .wrap #event_container {
+    gap: 65px;
+    margin: 90px auto 100px;
+  }
+  .wrap #event_container #event_going #event,
+  .wrap #event_container #event_end #event {
+    width: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .wrap #event_container #event_going #event .eventcont,
+  .wrap #event_container #event_end #event .eventcont {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 65px;
+  }
+  .wrap #event_container #event_going #event .eventcont img,
+  .wrap #event_container #event_end #event .eventcont img {
+    width: 100%;
+  }
+  .wrap #event_container #event_going #event .eventcont h3,
+  .wrap #event_container #event_end #event .eventcont h3 {
+    margin: 20px auto 0px;
+    font: 500 18px/1.8 "Futura PT";
+  }
+  .wrap #event_container #event_going #event .eventcont p,
+  .wrap #event_container #event_end #event .eventcont p {
+    margin: 0px auto 15px;
+    font: normal 14px/1.4 "Futura PT";
+    color: #a0a0a0;
+  }
+  .wrap #event_container #event_going #event .eventcont span,
+  .wrap #event_container #event_end #event .eventcont span {
+    font: 400 14px/1.4 "Futura PT";
+  }
+}/*# sourceMappingURL=style.css.map */
