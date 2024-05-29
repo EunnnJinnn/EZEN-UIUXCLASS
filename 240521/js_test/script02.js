@@ -9,8 +9,37 @@ const arr = [
   [19, 13, 30, 13, 19],
 ];
 
-const solution = (arr) => {};
+const solution = (arr) => {
+  // 기준값
+  let answer = Number.MIN_SAFE_INTEGER;
+  // 반복실행하고자 하는 숫자
+  let n = arr.length;
+
+  // 실제 연산된 결과값 저장 공간 (*행)
+  let sum1 = 0;
+
+  // 실제 연산된 결과값 저장 공간 (*열)
+  let sum2 = 0;
+
+  for (let i = 0; i < n; i++) {
+    sum1 = sum2 = 0;
+    for (let j = 0; j < n; j++) {
+      sum1 += arr[i][j];
+      sum2 += arr[j][i];
+    }
+    answer = Math.max(answer, sum1, sum2);
+  }
+
+  sum1 = sum2 = 0;
+  for (let i = 0; i < n; i++) {
+    sum1 += arr[i][i];
+    sum2 += arr[i][n - i - 1];
+  }
+  answer = Math.max(answer, sum1, sum2);
+  return answer;
+};
+
 console.log(solution(arr));
 
 // 중첩 for문
-// Math 수학객체 => 메서드 함수 max() : 인자값들 가운데 가장 큰 값을 도출   
+// Math 수학객체 => 메서드 함수 max() : 인자값들 가운데 가장 큰 값을 도출

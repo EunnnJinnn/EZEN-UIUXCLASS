@@ -1,28 +1,22 @@
-// 가위 바위 보
-// A,B 가 가위바위보 겜을 함 N번의 게임을 하여 A가 이기면 A를 출력하고 B가 이기면 B 출력 비길경우 D 출력, 1 : 가위, 2 : 바위, 3 : 보
+// 회문 문자열
+// 앞에서 읽을 때나 뒤에서 읽을 때나 같은 문자열을 회문 문자열이라 함
+// 문자열이 입력되면 해당 문자열이 회문 문자열이면 "yes", 회문 문자열이 아니면 "no"를 출력하는 프로그램 검사 시 대소문자 구분 X
 
-// 입력 : 회수 : 5 / A : 2 3 3 1 3 / B : 1 1 2 2 3
-// 출력 : A B A A D
+// 입력 : gooG
+// 출력 : YES
 
-const a = [2, 3, 3, 1, 3];
-const b = [1, 1, 2, 2, 3];
+const userWord = prompt("영어단어를 입력하세요");
 
-const solution = (a, b) => {
-  let answer = "";
+const solution = (userWord) => {
+  let answer = "YES";
+  const test = userWord.toLowerCase();
+  const len = test.length;
 
-  for (let i = 0; i < a.length; i++) {
-    if (a[i] === b[i]) {
-      answer += "D";
-    } else if (a[i] === 1 && b[i] === 3) {
-      answer += "A";
-    } else if (a[i] === 2 && b[i] === 1) {
-      answer += "A";
-    } else if (a[i] === 3 && b[i] === 2) {
-      answer += "A";
-    } else {
-      answer += "B";
+  for (let i = 0; i < Math.floor(len / 2); i++) {
+    if (test[i] !== test[len - i - 1]) {
+      return "NO";
     }
   }
   return answer;
 };
-console.log(solution(a, b));
+console.log(solution(userWord));

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./myboard.css">
+  <script src="./myboard.js"></script>
+  <title>My board</title>
+</head>
+<body>
+  <div class="wrap">
+    <div id="header">
+      <div id="header_popup">
+        <img
+          src="../../Index/0.image/inceto widget close icon.png"
+          alt="close"
+        />
+        <span>아닐로X아메스 샤워타임 리미티드 세트 25% 할인</span>
+        <img
+          src="../../Index/0.image/inceto widget close icon.png"
+          alt="close"
+        />
+      </div>
+      <div id="header_contents">
+        <button class="header_menu">
+          <div></div>
+          <div></div>
+          <div></div>
+        </button>
+        <a href="/Index/index.html" class="header_logo">
+          <img src="../../Index/0.image/logo.png" alt="logo" />
+        </a>
+        <div class="header_right">
+          <button class="header_search">
+            <img src="../../Index/0.image/ico-search-m01.png" alt="search" />
+          </button>
+          <a href="../Mypage/0.Login/Login.html" class="header_mypage">
+            <img src="../../Index/0.image/mo_ico-mypg-m01.png" alt="mypage" />
+          </a>
+          <a href="../Cart/Cart.html" class="header_cart">
+            <img src="../../Index/0.image/mo_cart.png" alt="" />
+          </a>
+          <button class="header_menu header_menu_mobile">
+            <div></div>
+            <div></div>
+            <div></div>
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- 모바일에서 댓글 클릭 시 My Comment 로 변경하는게 이쁠거 같음 -->
+    <div id="gnb">
+      <h1 class="gnb_container">My board</h1>  
+      <!-- <h1 class="gnb_container" onclick="reverse()">My Comment</h1>   -->
+    </div>
+    <div id="container">
+      <div class="myboard">
+        <div class="myboard_review_contents">
+          <ul>
+            <li class="myboard_selected">
+              <a href="#boardlist"><h4 class="mb01">게시글 (0)</h4></a>
+            </li>
+            <li class="myboard_selected">
+              <a href="#boardlist"><h4 class="mc01">댓글 (0)</h4></a>
+            </li>
+          </ul>
+          <div class="filter_container">
+            <div class="myboard_filters">
+              <span>
+                분류 선택
+                <select name="board_selecter" id="board_selecter">
+                  <option selected value="작성 일자별">작성 일자별</option>
+                  <option value="분류별">분류별</option>
+                </select>
+              </div>
+            </span>
+            <colgroup class="myboard_colg">
+              <col style="width: 70px;" />
+              <col style="width: 135px;" />
+              <col style="width: auto;" />
+              <col style="width: 84px;" />
+              <col style="width: 80px;" />
+              <col style="width: 55px;" />
+            </colgroup>
+            <table>
+            <thead>
+              <tr>
+                <!-- <tbody class="displaynone"></tbody> -->
+                  <th scope="col">번호</th>
+                  <th scope="col">분류</th>
+                  <th scope="col">제목</th>
+                  <th scope="col">작성자</th>
+                  <th scope="col">작성일</th>
+                  <th scope="col">조회</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th class="body_1">게시물이 없습니다.</th>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+            <div class="myboard_review_contents">
+              <div class="my_review_tab">
+                <div class="tab writable selected">
+                  <span class="tab_title">작성 가능한 리뷰</span>
+                  <span class="tab_review_count"><h5>(0)</h5></span>
+                </div>
+                <div class="tab writed selected"> 
+                  <span class="tab_title">작성한 리뷰</h5></span>
+                  <span class="tab_review_count"><h5>(0)</h5></span>
+                </div>
+              </div>
+              <div class="board_writable">
+                <div class="board_writable_selected">
+                  <div class="board_review_null">
+                    <div class="board_nullimg"></div>
+                    <div class="board_null_text">
+                      <span><h4>작성 가능한 리뷰가 없습니다</h4></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- <div class="board_writed">
+                <div class="board_writed_selected">
+                  <div class="board_review_null">
+                    <div class="board_nullimg"></div>
+                    <div class="board_null_text">
+                      <span><h4>리뷰가 없습니다</h4></span>
+                    </div>
+                  </div>
+                </div>
+              </div> -->
+            </div>
+          </div>
+          <!-- 모바일에서만 등장 -->
+          <!-- <div class="myboard_comment_contents">
+            <div class="board_comment">
+              <div class="board_writed_comment">
+                <div class="board_comment_null">
+                  <div class="board_nullimg"></div>
+                  <div class="board_null_text">
+                    <span><h4>작성한 댓글이 없습니다.</h4></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> -->
+      </div>
+    </div>
+    <div id="footer"></div>
+    <div id="aside"></div>
+    <div id="menu"></div>
+  </div>
+</body>
+</html>

@@ -1,22 +1,19 @@
-// 점수 계산 O,X문제는 두경우의 답을 가진다. 1번문제가 맞으면 1점, 연속으로 맞으면 +1점씩 늘어가고, 답을 틀리게 되면 0점, 다시 맞으면 1점으로 계산한다.
-// 입력 : 채점 - 1 0 1 1 1 0 0 1 1 0
-// 출력 : 점수 - 1 0 1 2 3 0 0 1 2 0
-// 총 점수 : 10점
+// 유효한 팰린드롬
+// 앞에서 읽을 때나 뒤에서 읽을 때나 같은 문자열을 팰린드룸이라고 함
+// 문자열이 입력되면 해당 문자열이 팰린드룸이면 "YES", 아니면 "NO"를 출력. 단, 회문을 검사할 때 알파벳만 가지고 회문을 검사하며, 대소문자 구분 X, 알파벳 이외의 문자들은 무시
+// 입력 : found7, time: study; Yduts; emit, 7Dnuof
+// 출력 : YES
 
-const arr = [1, 0, 1, 1, 1, 0, 0, 1, 1, 0];
+const str = "found7, time: study; Yduts; emit, 7Dnuof";
 
-const solution = (arr) => {
-  let answer = 0;
-  let cnt = 0;
+const solution = (str) => {
+  let answer = "YES";
+  const test = str.toLowerCase().replace(/[^a-z]/g, "");
 
-  for (let x of arr) {
-    if (x === 1) {
-      cnt++; // 연속으로 답을 맞은경우 증감연산자
-      answer += cnt;
-    } else {
-      cnt = 0;
-    }
+  // 배열로 만들어줘야함
+  if (test.split("").reverse().join("") !== test) {
+    return "NO";
   }
   return answer;
 };
-console.log(solution(arr));
+console.log(solution(str));

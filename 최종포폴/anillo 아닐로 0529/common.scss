@@ -1,0 +1,406 @@
+//==========reset==========//
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+//==========var==========//
+$Textcolor-black: #1e1e1e;
+$Textcolor-gray: #a0a0a0;
+$Textcolor-white: #fffefa;
+$backgroundcolor-blue: #83a2c1;
+$backgroundcolor-lightgreen: #f7f7ef;
+$backgroundcolor-light: #fafaf6;
+$Color-stroke: #e0ded9;
+$Color-lightgray: #f6f6f6;
+$Color-orange: #fc6408;
+
+//==========font==========//
+@import url("https://fonts.cdnfonts.com/css/futura-pt");
+//font-family: 'Futura PT', sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+//font-family: "Playfair Display", serif;
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
+//font-family: "Noto Sans KR", sans-serif;
+
+h1 {
+  font: normal 36px/1 "Playfair Display";
+  @media screen and (max-width: 768px) {
+    font-size: 56px;
+  }
+}
+h2 {
+  font: normal 28px/1 "Futura PT";
+  @media screen and (max-width: 768px) {
+    font-size: 48px;
+  }
+}
+h3 {
+  font: normal 18px/1 "Futura PT";
+  @media screen and (max-width: 768px) {
+    font-size: 40px;
+    line-height: 2.5rem;
+  }
+}
+h4 {
+  font: normal 14px/1 "Noto Sans KR";
+  @media screen and (max-width: 768px) {
+    font-size: 33px;
+    line-height: 2.5rem;
+  }
+}
+h5 {
+  font: normal 11px/1 "Noto Sans KR";
+  @media screen and (max-width: 768px) {
+    font-size: 30px;
+    line-height: 2.5rem;
+  }
+}
+
+//==========common==========//
+
+body {
+  background: $backgroundcolor-light;
+}
+
+#header {
+  width: 100%;
+  min-width: 390px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  #header_popup {
+    width: 100%;
+    height: 32px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: $backgroundcolor-blue;
+    color: #fff;
+    img {
+      width: 18px;
+      height: 18px;
+      &:nth-child(1) {
+        opacity: 0;
+      }
+      &:last-child {
+        filter: invert(1);
+      }
+    }
+  }
+  #header_contents {
+    width: 75%;
+    height: 78px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    button {
+      border: none;
+      background: none;
+    }
+    .header_menu {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      div {
+        width: 28px;
+        height: 1px;
+        background: $Textcolor-black;
+        &:nth-child(2) {
+          margin: 8px 0;
+        }
+      }
+    }
+    .header_right {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img {
+        width: 28px;
+        height: 28px;
+        margin: 0 5px;
+        object-fit: cover;
+      }
+      .header_menu_mobile {
+        margin-left: 10px;
+        display: none;
+      }
+    }
+    .header_logo {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      img {
+        width: 60px;
+        height: 60px;
+        object-fit: cover;
+      }
+    }
+  }
+  @media screen and (max-width: 768px) {
+    #header_popup {
+      height: 20px;
+      font-size: 20px;
+      padding: 20px;
+    }
+    #header_contents {
+      width: 100%;
+      min-width: 390px;
+      height: 70px;
+      border: 1px solid red;
+      padding: 20px;
+      .header_menu {
+        display: none;
+      }
+      .header_logo {
+        position: relative;
+        left: 0;
+        top: 0;
+        transform: translate(0, 0);
+        width: 64px;
+        height: 64px;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .header_right {
+        img {
+          width: 40px;
+          height: 40px;
+          margin-left: 10px;
+        }
+        .header_menu_mobile {
+          display: block;
+          margin-left: 15px;
+          div {
+            height: 2px;
+          }
+        }
+      }
+    }
+  }
+}
+
+#gnb {
+  width: 100%;
+  background: $backgroundcolor-lightgreen;
+  text-align: center;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  ul {
+    justify-content: space-between;
+  }
+  .gnb_container {
+    width: 100%;
+    height: 60px;
+    border-bottom: 1px solid $Color-stroke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    li {
+      font: normal 28px/1 "Playfair Display";
+      &:hover {
+        text-decoration: underline;
+      }
+      &:focus {
+        text-decoration: underline;
+      }
+    }
+  }
+  @media screen and (max-width: 768px) {
+    ul {
+      justify-content: space-between;
+    }
+    .gnb_container {
+      gap: 50px;
+      height: 80px;
+      justify-content: center;
+      padding: 0 20px;
+      &:nth-child(2) {
+        height: auto;
+        padding: 20px 40px;
+        text-wrap: wrap;
+      }
+    }
+  }
+}
+
+#menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 400px;
+  z-index: 99;
+  .menu {
+    width: 400px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #fcfcf2;
+    top: 0;
+    // left: -400px;  메뉴 토글 누르기 전엔 숨어있어야함
+    // box-shadow: 5px 0 10px rgba(0, 0, 0, 0.5);
+    font: normal 32px/1 "Playfair Display";
+    color: #1e1e1e;
+    text-align: center;
+    border: 1px solid #f00;
+
+    .closeB {
+      display: none;
+    }
+    .menus_left {
+      width: 100%;
+      position: relative;
+      padding-top: 80px;
+      .sub_menu_content {
+        width: 100%;
+        height: 60px;
+        border-bottom: 1px solid $Color-stroke;
+        input {
+          position: absolute;
+          opacity: 0;
+          z-index: -1;
+        }
+        .sub_menu {
+          max-height: 0;
+          overflow: hidden;
+          transition: all 0.8s ease-in;
+        }
+        .sub_menu_content input:checked ~ .sub_menu {
+          max-height: 100px;
+        }
+      }
+      .ch_label {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        cursor: pointer;
+      }
+      .ch_label::after {
+        content: "\276F";
+        position: absolute;
+        top: 10%;
+        right: 10%;
+        width: 20px;
+        height: 20px;
+        font-size: 30px;
+        color: $backgroundcolor-blue;
+        text-align: center;
+        transform: rotate(90deg);
+        transition: all 0.5s;
+      }
+      input:checked + .ch_label::after {
+        transform: rotate(270deg);
+      }
+    }
+    .menu .menus_left li a.menu_h2 {
+      display: block;
+      text-align: center;
+      border-top: 1px solid #e0ded9;
+      padding: 15px 0 0;
+    }
+    .menu .menus_left > li {
+      padding: 0 0 15px;
+    }
+
+    a:hover {
+      color: #83a2c1;
+    }
+    .side_menu_slogan {
+      position: absolute;
+      display: inline-block;
+      width: 166px;
+      bottom: 30px;
+      left: calc(50% - 83px);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .menu {
+      position: absolute;
+      width: 100vw;
+      top: 70px;
+      height: calc(100vh - 70px);
+      left: 0;
+      overflow: hidden;
+      transition: all 0.3s ease-out;
+      font: normal 32px/1 "Playfair Display";
+      color: #1e1e1e;
+      text-align: center;
+      background: #fcfcf2;
+      border: 1px solid #f00;
+
+      // .menu_lf_cls {
+      //   display: none;
+      // }
+      .menus_left {
+        width: 100vw;
+        height: 577px;
+        border: 1px solid #00f;
+        padding-top: 75px;
+        text-align: center;
+        .menus_left > li {
+          width: 100vw;
+          position: relative;
+          padding: 0 0 15px;
+          border: 1px solid #ff0;
+          text-align: center;
+        }
+      }
+    }
+    .menu .menus_left li a.menu_h2 {
+      display: block;
+      text-align: center;
+      border-top: 1px solid #e0ded9;
+      padding: 15px 0 0;
+    }
+    .menu .menus_left > li {
+      padding: 0 0 15px;
+    }
+    .sub_menu {
+      width: 100vw;
+      height: 38px;
+      font: normal 17px "Futura PT";
+      text-align: center;
+      padding-top: 16px;
+      text-transform: uppercase;
+      overflow: hidden;
+    }
+    a:hover {
+      color: #83a2c1;
+    }
+    .side_menu_slogan {
+      position: absolute;
+      display: inline-block;
+      width: 166px;
+      bottom: 30px;
+      left: calc(50% - 83px);
+    }
+  }
+
+  #asdie {
+    width: 100%;
+  }
+
+  #footer {
+    width: 100%;
+  }
+}

@@ -23,4 +23,20 @@ list.insertAt(3, 3);
 list.insertAt(4, 4);
 list.printAll();
 
+console.log("=== clear() 호출 ===");
+list.clear();
+list.printAll();
+
+console.log("=== insertLast() 호출 ===");
+list.insertLast(1);
+list.insertLast(2);
+list.insertLast(3);
+list.printAll();
+
+console.log("=== deleteAt() 호출 ===");
+list.deletAt(0);
+list.printAll();
+
+console.log(=== deleteAt() 호출 ===);
+list.insertAt()
 // 터미널 단축어 cls = clear
