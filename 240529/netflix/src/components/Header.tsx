@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { motion, useAnimation, useScroll } from "framer-motion";
-import { Link, useMatch } from "react-router-dom";
+import { Link, useMatch, useNavigate } from "react-router-dom";
+import { useForm } from "react-hook-form";
 
 const Nav = styled(motion.nav)`
   display: flex;
@@ -11,7 +12,6 @@ const Nav = styled(motion.nav)`
   top: 0;
   width: 100%;
   height: 80px;
-  /* background-color: #000; */
   color: #fff;
   font-size: 18px;
   padding: 0 20px;
@@ -64,7 +64,7 @@ const Circle = styled(motion.span)`
   background-color: ${(props) => props.theme.red};
 `;
 
-const Search = styled.span`
+const Search = styled.form`
   color: ${(props) => props.theme.red};
   display: flex;
   align-items: center;
@@ -85,8 +85,13 @@ const Input = styled(motion.input)`
   border: 1px solid ${(props) => props.theme.white.lighter};
   border-radius: 4px;
   background-color: transparent;
-  color: #fff;
+  color: ${(props) => props.theme.red};
   z-index: -1;
+  border: none;
+  &:focus {
+    outline: none;
+    border-bottom: 1px solid ${(props) => props.theme.red};
+  }
 `;
 
 const logoVariants = {
@@ -98,11 +103,19 @@ const logoVariants = {
 };
 
 const navVariants = {
-  top: { backgroundColor: "rgba(255, 255, 255, 0)" },
+  top: { backgroundColor: "rgba(0, 0, 0, 1)" },
   scroll: { backgroundColor: "rgba(255, 255, 255, 1)" },
 };
 
+interface IForm {
+  keyword: string;
+}
+
 const Header = () => {
+  const history = useNavigate();
+  const gotoMain = () => {
+    history("/");
+  };
   const [searchOpen, setSearchOpen] = useState(false);
   const toggleSearch = () => {
     if (searchOpen) {
@@ -117,6 +130,7 @@ const Header = () => {
     setSearchOpen((prev) => !prev);
   };
   const homeMatch = useMatch("/");
+  const modalMatch = useMatch("/movies/*");
   const tvMatch = useMatch("/tv");
   const inputAnimation = useAnimation();
   const navAnimation = useAnimation();
@@ -130,10 +144,17 @@ const Header = () => {
       }
     });
   }, [scrollY]);
+
+  const { register, handleSubmit, setValue } = useForm<IForm>();
+  const onValid = (data: IForm) => {
+    history(`/search?keyword=${data.keyword}`);
+    setValue("keyword", "");
+  };
   return (
     <Nav variants={navVariants} animate={navAnimation} initial="top">
       <Col>
         <Logo
+          onClick={gotoMain}
           variants={logoVariants}
           initial="normal"
           whileHover="active"
@@ -150,6 +171,7 @@ const Header = () => {
           <Item>
             <Link to="/">HOME</Link>
             {homeMatch && <Circle layoutId="circle" />}
+            {modalMatch && <Circle layoutId="circle" />}
           </Item>
           <Item>
             <Link to="/tv">TV SHOWS</Link>
@@ -158,7 +180,7 @@ const Header = () => {
         </Items>
       </Col>
       <Col>
-        <Search>
+        <Search onSubmit={handleSubmit(onValid)}>
           <motion.svg
             onClick={toggleSearch}
             animate={{ x: searchOpen ? -216 : 0 }}
@@ -170,6 +192,7 @@ const Header = () => {
             <path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" />
           </motion.svg>
           <Input
+            {...register("keyword", { required: true, minLength: 2 })}
             type="text"
             placeholder="Search for movie or tv..."
             animate={inputAnimation}
