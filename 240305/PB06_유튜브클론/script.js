@@ -2,7 +2,7 @@ const player = document.querySelector(".player");
 const video = document.querySelector("video");
 const playButton = document.querySelector(".play-pause");
 const volumeBar = document.querySelector("input[type='range']");
-const rateButtons = document.querySelector(".rate");
+const rateButtons = document.querySelectorAll(".rate");
 const progressCover = document.querySelector(".progress");
 
 const videoPoint = (e) => {
@@ -15,18 +15,18 @@ const videoPoint = (e) => {
 
 const updateProgress = () => {
   const progressBar = document.querySelector(".bar");
-  const ProgressPointer = document.querySelector(".circle");
+  const progressPointer = document.querySelector(".circle");
   const currentTime = video.currentTime;
   const duration = video.duration;
   const percent = (currentTime / duration) * 100;
   progressBar.style.width = `${percent}%`;
   const progressBarWidth = progressCover.clientWidth;
   const newPosition = (currentTime / duration) * progressBarWidth - 1;
-  ProgressPointer.style.left = `${newPosition}px`;
+  progressPointer.style.left = `${newPosition}px`;
 };
 
 const setRate = (e) => {
-  const { rate } = e.target.dataset; //구조분해할당
+  const { rate } = e.target.dataset;
   video.playbackRate = rate;
 };
 
@@ -39,7 +39,7 @@ const formatting = (time) => {
   const fMin = min < 10 ? `0${min}` : min;
   const fHour = hour < 10 ? `0${hour}` : hour;
 
-  return `${fHour}:${fMin}:${fSec} `;
+  return `${fHour}:${fMin}:${fSec}`;
 };
 
 const updateTime = () => {
@@ -55,9 +55,10 @@ const setVolume = (e) => {
 };
 
 const play = () => {
-  playButton.innerText = "||";
+  playButton.innerText = "∥";
   video.play();
 };
+
 const pause = () => {
   playButton.innerText = "▶";
   video.pause();

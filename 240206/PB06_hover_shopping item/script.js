@@ -19,10 +19,12 @@ colors.forEach((color) => {
   color.addEventListener("click", function () {
     function siblings(e) {
       const children = e.parentElement.children;
-      for (let i = 0; i < children, length; i++) {
+      for (let i = 0; i < children.length; i++) {
         children[i].classList.remove("active");
       }
     }
+    siblings(this);
+    this.classList.add("active");
   });
 });
 

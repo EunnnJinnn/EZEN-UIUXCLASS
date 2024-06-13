@@ -1,9 +1,9 @@
 .heading {
   text-align: center;
   position: relative;
-  padding-bottom: 20px;
+  padding-bottom: 12px;
   span {
-    color: aquamarine;
+    color: royalblue;
   }
   &::before {
     content: "";
@@ -11,7 +11,8 @@
     left: 50%;
     bottom: 0;
     transform: translateX(-50%);
-    width: 400px;
+    width: 100px;
     height: 4px;
+    background: crimson;
   }
 }

@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Divjason/nodejstest.git"
+    "url": "https://github.com/EunnnJinnn/nodejstest.git"
   },
   "author": "David",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Divjason/nodejstest/issues"
+    "url": "https://github.com/EunnnJinnn/nodejstest/issues"
   },
-  "homepage": "https://github.com/Divjason/nodejstest#readme",
+  "homepage": "https://github.com/EunnnJinnn/nodejstest#readme",
   "dependencies": {
     "express": "^4.19.2",
     "mongoose": "^8.4.1",

@@ -26,8 +26,9 @@ nav {
   text-align: center;
   line-height: 50px;
 }
+
 section {
-  border: 1px solid#000;
+  border: 1px solid #000;
   width: inherit;
   height: 800px;
   display: flex;
@@ -37,17 +38,18 @@ section {
 section h2 {
   font-size: 4rem;
   text-transform: uppercase;
-  text-shadow: 1px 2px 1px #-00;
+  text-shadow: 1px 2px 1px #000;
+  color: #fff;
 }
 .page1 {
-  background: url(./images/eu.jpg) center/cover no-repeat;
+  background: url("./images/eu.jpg") center/cover no-repeat;
 }
 .page2 {
-  background: url(./images/us.jpg) center/cover no-repeat;
+  background: url("./images/us.jpg") center/cover no-repeat;
 }
 .page3 {
-  background: url(./images/ch.jpg) center/cover no-repeat;
+  background: url("./images/ch.jpg") center/cover no-repeat;
 }
 .page4 {
-  background: url(./images/jp.jpg) center/cover no-repeat;
+  background: url("./images/jp.jpg") center/cover no-repeat;
 }

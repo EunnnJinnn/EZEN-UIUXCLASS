@@ -1,7 +1,7 @@
-@import url(./reset.css);
+@import url("./reset.css");
 @font-face {
-  font-family: "baemin";
-  src: url(./font/otf/BMDOHYEON_otf.otf);
+  font-family: "Baemin";
+  src: url("./font/BMDOHYEON_otf.otf");
 }
 
 body {
@@ -9,32 +9,32 @@ body {
   justify-content: center;
   align-items: center;
   height: 100%;
-  font-family: baemin;
+  font-family: Baemin;
 }
 
 #wrap {
   width: 100%;
-  height: 100vh; /* 100vh ->100% */
+  height: 100vh; /* 100vh => 100% */
   background: #f5f5f5;
 }
 
 /* header */
 header {
-  width: inherit;
+  width: 100%;
   height: 110px;
   background: #2ac1bc;
   border-radius: 0 0 8px 8px;
 }
 nav {
   display: flex;
+  justify-content: space-between;
   align-items: center;
   padding: 16px 16px 12px;
-  margin: 400%;
 }
 nav .nav_left select {
-  font-family: baemin;
+  font-family: Baemin;
   border: none;
-  background: transparent; /* 투명 */
+  background: transparent;
   font-size: 16px;
   color: #fff;
 }
@@ -42,7 +42,7 @@ nav select option {
   color: #2ac1bc;
 }
 nav .nav_right {
-  display: flex; /* flex 처음엔 붙음 gap을 주면됨 */
+  display: flex;
   gap: 20px;
   font-size: 18px;
   color: #fff;
@@ -50,13 +50,13 @@ nav .nav_right {
 }
 #search {
   padding: 0 16px 16px;
-  position: relative; /* 절대 위치 부모요소가 포지션 relative를 갖고 있어야함 */
+  position: relative;
 }
 #search span {
   position: absolute;
   left: 28px;
   top: 50%;
-  transform: translateY(-84%); /* 위치변경 */
+  transform: translateY(-84%);
   color: #2ac1bc;
 }
 #search input {
@@ -68,7 +68,7 @@ nav .nav_right {
 
 /* section */
 section #badges {
-  display: flex; /* 한 줄로 */
+  display: flex;
   padding: 16px;
   gap: 10px;
 }
@@ -80,7 +80,7 @@ section .badge {
   background: #fff;
 }
 section .badge span {
-  font-size: 15px;
+  font-size: 16px;
   color: #2ac1bc;
 }
 
@@ -127,7 +127,7 @@ section .badge span {
 #popup {
   width: 100%;
   height: 330px;
-  background: url(./img/b_8.jpg) center/cover no-repeat;
+  background: url("./img/b_8.jpg") center/cover no-repeat;
   display: none;
 }
 #menusearch:checked + #wrap > #popup {

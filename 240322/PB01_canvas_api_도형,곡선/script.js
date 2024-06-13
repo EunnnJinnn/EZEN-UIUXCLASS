@@ -119,19 +119,19 @@ const ctx = canvas.getContext("2d"); //그림을 그릴 준비/ 디자인 속성
 // ctx.stroke();
 
 // ----------------------------------------------------------------
-// // 세모 안에 동그라미
-// let triangle = new Path2D();
-// triangle.moveTo(100, 100);
-// triangle.lineTo(300, 100);
-// triangle.lineTo(200, 260);
-// triangle.closePath();
+// 세모 안에 동그라미
+let triangle = new Path2D();
+triangle.moveTo(100, 100);
+triangle.lineTo(300, 100);
+triangle.lineTo(200, 260);
+triangle.closePath();
 
-// let circle = new Path2D();
-// circle.arc(200, 155, 50, 0, (Math.PI / 180) * 360);
+let circle = new Path2D();
+circle.arc(200, 155, 50, 0, (Math.PI / 180) * 360);
 
-// ctx.fillStyle = "green";
-// ctx.stroke(triangle);
-// ctx.fill(circle);
+ctx.fillStyle = "green";
+ctx.stroke(triangle);
+ctx.fill(circle);
 
 // -----------------------------------------------------------------
 

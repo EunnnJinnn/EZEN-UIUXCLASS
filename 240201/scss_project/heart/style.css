@@ -1,5 +1,11 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-  background-color: #000;
+  background: #222;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -7,58 +13,37 @@ body {
 }
 
 .heart-beat {
+  width: 100px;
+  height: 100px;
   position: relative;
-  animation: 0.8s beat infinite;
+  background: #ff4757;
+  transform: rotate(45deg);
+  box-shadow: 0 -10px 100px #ff4757, 0 -10px 150px #ff4757, 0 -10px 200px #ff4757;
+  animation: heart-beat 0.5s linear infinite;
 }
-
-.heart {
-  position: relative;
-  background-color: firebrick;
-  display: inline-block;
-  height: 60px;
-  top: 0;
-  left: 0;
-  transform: rotate(-45deg);
-  width: 60px;
-  box-shadow: 0 -10px 100px firebrick, 0 -10px 90px firebrick;
-}
-
-.heart:before,
-.heart:after {
+.heart-beat::before, .heart-beat::after {
   content: "";
-  background-color: firebrick;
-  border-radius: 50%;
-  height: inherit;
-  width: inherit;
   position: absolute;
   width: inherit;
-  box-shadow: 0 -10px 100px firebrick;
+  height: inherit;
+  background: inherit;
+  border-radius: 100%;
+}
+.heart-beat::before {
+  top: -50%;
+}
+.heart-beat::after {
+  left: -50%;
 }
 
-.heart:before {
-  top: -30px;
-  left: 0;
-}
-
-.heart:after {
-  left: 30px;
-  top: 0;
-}
-
-@keyframes beat {
+@keyframes heart-beat {
   0% {
-    transform: scale(1);
+    transform: rotate(45deg) scale(1);
   }
-  25% {
-    transform: scale(1.1);
-  }
-  40% {
-    transform: scale(1);
-  }
-  60% {
-    transform: scale(1.1);
+  50% {
+    transform: rotate(45deg) scale(1.05);
   }
   100% {
-    transform: scale(1);
+    transform: rotate(45deg) scale(0.95);
   }
 }/*# sourceMappingURL=style.css.map */
